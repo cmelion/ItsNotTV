@@ -154,7 +154,7 @@ module.exports = function (grunt) {
                     "**/*.css",
 
                     //partials
-                    "**/*.ptl.html",
+                    "**/*.ptl.html"
 
                     //Images
 

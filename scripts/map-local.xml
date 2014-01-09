@@ -5,65 +5,10 @@
   <mappings>
     <mapLocalMapping>
       <sourceLocation>
-        <protocol>http</protocol>
-        <host>predevhbo.hbo.com</host>
-        <path>/html/*</path>
-      </sourceLocation>
-      <dest>/software/dp/P24/html</dest>
-      <enabled>true</enabled>
-      <caseSensitive>false</caseSensitive>
-    </mapLocalMapping>
-    <mapLocalMapping>
-      <sourceLocation>
-        <host>predevhbo.hbo.com</host>
-        <path>/</path>
-      </sourceLocation>
-      <dest>/software/dp/P24/index.html</dest>
-      <enabled>true</enabled>
-      <caseSensitive>true</caseSensitive>
-    </mapLocalMapping>
-    <mapLocalMapping>
-      <sourceLocation>
-        <host>predevhbo.hbo.com</host>
-        <path>/utils/*</path>
-      </sourceLocation>
-      <dest>/software/dp/P24/utils</dest>
-      <enabled>true</enabled>
-      <caseSensitive>true</caseSensitive>
-    </mapLocalMapping>
-    <mapLocalMapping>
-      <sourceLocation>
-        <host>predevhbo.hbo.com</host>
-        <path>/utils/js/angular/angular.min.js</path>
-      </sourceLocation>
-      <dest>/software/dp/P24/utils/js/angular/angular.js</dest>
-      <enabled>true</enabled>
-      <caseSensitive>false</caseSensitive>
-    </mapLocalMapping>
-    <mapLocalMapping>
-      <sourceLocation>
-        <host>predevhbo.hbo.com</host>
-        <path>/#/index.html</path>
-      </sourceLocation>
-      <dest>/software/dp/P24/index.html</dest>
-      <enabled>true</enabled>
-      <caseSensitive>true</caseSensitive>
-    </mapLocalMapping>
-    <mapLocalMapping>
-      <sourceLocation>
-        <host>predevhbo.hbo.com</host>
-        <path>/#/fullpage/register</path>
-      </sourceLocation>
-      <dest>/software/dp/P24/index.html</dest>
-      <enabled>true</enabled>
-      <caseSensitive>true</caseSensitive>
-    </mapLocalMapping>
-    <mapLocalMapping>
-      <sourceLocation>
         <host>its-not-tv.com</host>
         <path>/</path>
       </sourceLocation>
-      <dest>~/its-not-tv/application/index.html</dest>
+      <dest>/Users/ipaddev/ItsNotTV/application/index.html</dest>
       <enabled>true</enabled>
       <caseSensitive>false</caseSensitive>
     </mapLocalMapping>
@@ -71,7 +16,24 @@
       <sourceLocation>
         <host>its-not-tv.com</host>
       </sourceLocation>
-      <dest>~/its-not-tv</dest>
+      <dest>/Users/ipaddev/ItsNotTV</dest>
+      <enabled>true</enabled>
+      <caseSensitive>false</caseSensitive>
+    </mapLocalMapping>
+    <mapLocalMapping>
+      <sourceLocation>
+        <host>publish.its-not-tv.com</host>
+        <path>/</path>
+      </sourceLocation>
+      <dest>/Users/ipaddev/ItsNotTV/publish/application/index.html</dest>
+      <enabled>true</enabled>
+      <caseSensitive>true</caseSensitive>
+    </mapLocalMapping>
+    <mapLocalMapping>
+      <sourceLocation>
+        <host>publish.its-not-tv.com</host>
+      </sourceLocation>
+      <dest>/Users/ipaddev/ItsNotTV/publish</dest>
       <enabled>true</enabled>
       <caseSensitive>true</caseSensitive>
     </mapLocalMapping>
