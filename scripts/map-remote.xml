@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<?charles serialisation-version='2.0' ?>
+<map>
+  <toolEnabled>true</toolEnabled>
+  <mappings>
+    <mapMapping>
+      <sourceLocation>
+        <host>predevhbo.hbo.com</host>
+        <path>/SiteMain.swf</path>
+      </sourceLocation>
+      <destLocation>
+        <host>predevhbo.hbo.com</host>
+        <path>/bin/SiteMain.swf</path>
+      </destLocation>
+      <enabled>true</enabled>
+    </mapMapping>
+    <mapMapping>
+      <sourceLocation>
+        <host>predevhbo.hbo.com</host>
+        <path>/web/*</path>
+      </sourceLocation>
+      <destLocation>
+        <host>predevhbo.hbo.com</host>
+        <path>/bin/web/</path>
+      </destLocation>
+      <enabled>true</enabled>
+    </mapMapping>
+    <mapMapping>
+      <sourceLocation>
+        <host>predevhbo.hbo.com</host>
+        <path>/config/*</path>
+      </sourceLocation>
+      <destLocation>
+        <host>predevhbo.hbo.com</host>
+        <path>/bin/web/assets/config/</path>
+      </destLocation>
+      <enabled>true</enabled>
+    </mapMapping>
+  </mappings>
+</map>

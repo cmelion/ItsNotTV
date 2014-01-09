@@ -1,0 +1,12 @@
+
+.idea/**/* 
+.idea/.name
+.idea/workspace.xml
+
+node_modules/**/*
+node_modules/.name
+
+publish/**/*
+publlish/.name
+
+

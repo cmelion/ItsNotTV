@@ -1,0 +1,12 @@
+Domain Name:its-not-tv.com.
+Hosted Zone ID:Z1SIMHW2CAA1U8
+Record Set Count:2
+Comment:It's Not TV Parody Site
+Delegation Set *:
+ns-1403.awsdns-47.org
+ns-1751.awsdns-26.co.uk
+ns-417.awsdns-52.com
+ns-570.awsdns-07.net
+* Before the Domain Name System will start to route queries for this domain to Route 53 name servers,
+you must update the name server records either with the current DNS service or with the registrar for the domain,
+ as applicable. For more information, see Help.
