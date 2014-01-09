@@ -5,7 +5,7 @@
   <mappings>
     <mapLocalMapping>
       <sourceLocation>
-        <host>its-not-tv.com</host>
+        <host>dev.its-not-tv.com</host>
         <path>/</path>
       </sourceLocation>
       <dest>/software/dp/ItsNotTV/application/index.html</dest>
@@ -14,18 +14,18 @@
     </mapLocalMapping>
     <mapLocalMapping>
       <sourceLocation>
-        <host>its-not-tv.com</host>
+        <host>dev.its-not-tv.com</host>
       </sourceLocation>
       <dest>/software/dp/ItsNotTV</dest>
       <enabled>true</enabled>
-      <caseSensitive>false</caseSensitive>
+      <caseSensitive>true</caseSensitive>
     </mapLocalMapping>
     <mapLocalMapping>
       <sourceLocation>
         <host>publish.its-not-tv.com</host>
         <path>/</path>
       </sourceLocation>
-      <dest>/software/dp/publish/application/index.html</dest>
+      <dest>/software/dp/ItsNotTV/publish/application/index.html</dest>
       <enabled>true</enabled>
       <caseSensitive>true</caseSensitive>
     </mapLocalMapping>
