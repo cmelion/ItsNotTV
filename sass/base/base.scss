@@ -1,3 +1,7 @@
+/* base.scss */
+$image-path: '/images';
+
 body {
-  background-image: url('images/red_flame_fractal_background_seamless');
+  color: #ffffff;
+  background-image: url($image-path + '/red_flame_fractal_background_seamless.jpg');
 }

@@ -170,8 +170,8 @@ module.exports = function (grunt) {
         //Embed images in CSS files to reduce connections/mobile latency
         imageEmbed: {
             publish: {
-                src: ["publish/css/*.css"],
-                dest: "publish/css",
+                src: ["publish/css/core-styles.css"],
+                dest: "publish/css/core-styles.css",
                 options: {
                     baseDir : './publish',
                     maxImageSize: '64000',
@@ -221,6 +221,7 @@ module.exports = function (grunt) {
         'htmlcompressor',
         'sass',
         'copy',
+        'imageEmbed',
         'manifest'
     ]);
 

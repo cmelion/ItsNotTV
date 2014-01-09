@@ -1,0 +1,5 @@
+/* this is a top level placeholder for core-styles use @import instead of placing actual styles here*/
+/* base.scss */
+body {
+  color: #ffffff;
+  background-image: url("/images/red_flame_fractal_background_seamless.jpg"); }
