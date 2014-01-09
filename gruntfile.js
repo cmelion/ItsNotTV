@@ -126,7 +126,7 @@ module.exports = function (grunt) {
             compile: {
                 files: [{
                     expand: true,
-                    src: ['**/*.ptl.html'],
+                    src: ['**/*.ptl.html','index.html'],
                     dest: 'publish/application',
                     cwd: 'application/'
                 }],
@@ -134,6 +134,33 @@ module.exports = function (grunt) {
                     type: 'html',
                     preserveServerScript: true
                 }
+            }
+        },
+
+        // application cache
+        manifest: {
+            generate: {
+                options: {
+                    basePath: "publish/",
+                    network:  ["*"],
+                    verbose: true,
+                    timestamp: true
+                },
+                src: [
+                    //JavaScript
+                    "**/*.js",
+
+                    //Styles
+                    "**/*.css",
+
+                    //partials
+                    "**/*.ptl.html",
+
+                    //Images
+
+                    //Fonts
+                ],
+                dest: "publish/cache.manifest"
             }
         }
     });
@@ -145,7 +172,8 @@ module.exports = function (grunt) {
         'groundskeeper',
         'uglify',
         'compress',
-        'htmlcompressor'
+        'htmlcompressor',
+        'manifest'
     ]);
 
     grunt.registerTask('writeConfig',
