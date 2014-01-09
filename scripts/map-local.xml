@@ -8,7 +8,7 @@
         <host>its-not-tv.com</host>
         <path>/</path>
       </sourceLocation>
-      <dest>/Users/ipaddev/ItsNotTV/application/index.html</dest>
+      <dest>/software/dp/ItsNotTV/application/index.html</dest>
       <enabled>true</enabled>
       <caseSensitive>false</caseSensitive>
     </mapLocalMapping>
@@ -16,7 +16,7 @@
       <sourceLocation>
         <host>its-not-tv.com</host>
       </sourceLocation>
-      <dest>/Users/ipaddev/ItsNotTV</dest>
+      <dest>/software/dp/ItsNotTV</dest>
       <enabled>true</enabled>
       <caseSensitive>false</caseSensitive>
     </mapLocalMapping>
@@ -25,7 +25,7 @@
         <host>publish.its-not-tv.com</host>
         <path>/</path>
       </sourceLocation>
-      <dest>/Users/ipaddev/ItsNotTV/publish/application/index.html</dest>
+      <dest>/software/dp/publish/application/index.html</dest>
       <enabled>true</enabled>
       <caseSensitive>true</caseSensitive>
     </mapLocalMapping>
@@ -33,7 +33,7 @@
       <sourceLocation>
         <host>publish.its-not-tv.com</host>
       </sourceLocation>
-      <dest>/Users/ipaddev/ItsNotTV/publish</dest>
+      <dest>/software/dp/ItsNotTV/publish</dest>
       <enabled>true</enabled>
       <caseSensitive>true</caseSensitive>
     </mapLocalMapping>

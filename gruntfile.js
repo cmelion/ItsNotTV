@@ -69,7 +69,6 @@ module.exports = function (grunt) {
         groundskeeper: {
             corelibs: {  //Primarily third party libs that seldom change
                 files: [
-                    { src: 'application/bootstrap.js', dest: 'publish/application/bootstrap.js' },
                     { src: srcDependencyArray[0], dest: 'publish/' + tgtDependencyArray[0] }
                 ],
                 options: {  // this options only affect the corelibs sub=task
@@ -78,6 +77,8 @@ module.exports = function (grunt) {
             },
             application: {
                 files: [
+                    // Bootstrap
+                    { src: 'application/bootstrap.js', dest: 'publish/application/bootstrap.js' },
                     //Core Dependencies moderate rate of change
                     { src: srcDependencyArray[1], dest: 'publish/' + tgtDependencyArray[1] },
 
@@ -85,7 +86,7 @@ module.exports = function (grunt) {
                     { src: srcDependencyArray[2], dest: 'publish/' + tgtDependencyArray[2]}
                 ],
                 options: {  // this options only affect the compile sub-task
-                    console: false //Do try to strip out console.log reference, it's required
+                    console: true //Do try to strip out console.log reference, it's required
                 }
             }
         },
@@ -137,7 +138,49 @@ module.exports = function (grunt) {
             }
         },
 
-        // application cache
+        //Compile SCSS into the publish folder as CSS
+        sass: {
+            publish: {
+                options: {
+                    style: 'compressed',
+                    cache: false
+                },
+                files: [{
+                    expand: true,
+                    src: ['*.scss'],
+                    dest: 'publish/css/',
+                    cwd: 'sass',
+                    ext: '.css'
+                }]
+            }
+        },
+
+        //Copy remaining required resources
+        copy: {
+            publish: {
+                files: [{
+                    expand: true,
+                    src: ['images/**/*'],
+                    dest: 'publish/',
+                    cwd: ''
+                }]
+            }
+        },
+
+        //Embed images in CSS files to reduce connections/mobile latency
+        imageEmbed: {
+            publish: {
+                src: ["publish/css/*.css"],
+                dest: "publish/css",
+                options: {
+                    baseDir : './publish',
+                    maxImageSize: '64000',
+                    deleteAfterEncoding: false
+                }
+            }
+        },
+
+        // Generate application cache
         manifest: {
             generate: {
                 options: {
@@ -154,11 +197,14 @@ module.exports = function (grunt) {
                     "**/*.css",
 
                     //partials
-                    "**/*.ptl.html"
+                    "**/*.ptl.html",
 
                     //Images
 
                     //Fonts
+
+                    //Exclusions
+                    "!node_modules/**/*"
                 ],
                 dest: "publish/cache.manifest"
             }
@@ -173,6 +219,8 @@ module.exports = function (grunt) {
         'uglify',
         'compress',
         'htmlcompressor',
+        'sass',
+        'copy',
         'manifest'
     ]);
 
