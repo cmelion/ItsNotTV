@@ -1,0 +1,72 @@
+@import "../browsers/browser.scss";
+@import "../browsers/ie.browser.scss";
+@import "../browsers/mozilla.browser.scss";
+@import "../browsers/webkit.browser.scss";
+
+@import "pie.mixins";
+@import "utils.mixins";
+@import "bordersAndBG.mixins";
+@import "opacity.mixins";
+@import "shadows.mixins";
+@import "transitions.mixins";
+@import "ui.mixins";
+
+@mixin vendorPrefixes($prop, $val, $prefixVal: false) {
+
+  @each $vendor in $vendors {
+
+    @if $prefixVal == true {
+      -#{$vendor}-#{$prop}: -#{$vendor}-#{$val};
+    } @else {
+      -#{$vendor}-#{$prop}: $val;
+    }
+
+  }
+
+  #{$prop}: #{$val};
+};
+
+@mixin prefixValue($prop, $val) {
+  $values: '';
+  $valueCount: 1;
+  content: '#{length($val)}';
+
+  @each $vendor in $vendors {
+
+    @each $value in $val {
+
+      @if ($valueCount < length($val)) {
+        $values: $values + '-#{$vendor}-' + $value + ',';
+      } @else {
+        $values: $values + '-#{$vendor}-' + $value;
+      }
+
+      $valueCount: $valueCount + 1;
+    };
+
+    #{$prop} : #{$values};
+
+    $values: '';
+    $valueCount: 1;
+  };
+
+  #{$prop} : #{$val};
+};
+
+@mixin rotate($degree, $ieFilter) {
+  @if ($ieFilter == true) {
+    //There are only four rotational values that IE can handle via filters
+    @if ($degree == 90) {
+      @include ieFilter("BasicImage", "rotation=1");
+    } @else if ($degree == 180) {
+      @include ieFilter("BasicImage", "rotation=2");
+    } @else if ($degree == 270) {
+      @include ieFilter("BasicImage", "rotation=3");
+    } @else if ($degree == 360) {
+      @include ieFilter("BasicImage", "rotation=4");
+    }
+  }
+
+  @include vendorPrefixes(transform, rotate(#{$degree}deg));
+};
+

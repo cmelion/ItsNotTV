@@ -1,0 +1,39 @@
+/*Forces Hardware Acceleration on items which */
+@mixin hardwareAccelerate() {
+  @include vendorPrefixes(transform, translateZ(0));
+  @include vendorPrefixes(backface-visibility, hidden);
+};
+
+
+/*Disabling appearance will remove the browser-specific appearance associated with items such as progress indicators, buttons, menus, etc*/
+@mixin disableAppearance() {
+  @include vendorPrefixes(appearance, none);
+};
+
+/*Disabling pointer events will keep elements from responding to clicks, hover and taps*/
+@mixin disablePointerEvents() {
+  @include vendorPrefixes(pointer-events, none);
+};
+
+@mixin enablePointerEvents() {
+  @include vendorPrefixes(pointer-events, auto);
+};
+
+/*Disabling select will disallow the select of an element's text content*/
+@mixin disableSelect() {
+  @include vendorPrefixes(user-select, none);
+};
+
+@mixin enableSelect() {
+  @include vendorPrefixes(user-select, auto);
+};
+
+/*Disbling content edit will keep users from being able to modify an element's content.*/
+@mixin disableContentEdit() {
+  @include vendorPrefixes(user-modify, read-only);
+};
+
+@mixin enableContentEdit() {
+  @include vendorPrefixes(user-modify, read-write);
+};
+

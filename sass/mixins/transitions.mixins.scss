@@ -1,0 +1,27 @@
+
+@mixin fadeOut($startOpacity: 1, $endOpacity: 0, $duration: 1s, $timing: ease-out) {
+  @include opacity($startOpacity, false);
+  @include vendorPrefixes(transition, opacity #{$duration} #{$timing});
+
+  &.fade-out {
+    @include opacity($endOpacity, false);
+  }
+};
+
+@mixin fadeIn($startOpacity: 0, $endOpacity: 1, $duration: 1s, $timing: ease-in) {
+  @include opacity($startOpacity, false);
+  @include vendorPrefixes(transition, opacity #{$duration} #{$timing});
+
+  &.fade-in {
+    @include opacity($endOpacity, false);
+  }
+};
+
+@mixin easeInOut($startOpacity: 1, $duration: 1s, $timing: ease-in-out) {
+  @include vendorPrefixes(transition, opacity #{$duration} #{$timing});
+};
+
+/* transition mixin accepts multiple style properties and transition timings types. I.e., css syntax ( ('top 1 linear', 'left 1 ease-in-out' ) ) */
+@mixin transition ($styleProperties: left, $durations: 1s, $delays: 0s, $timing-function: linear) {
+  @include vendorPrefixes(transition, #{$styleProperties});
+}

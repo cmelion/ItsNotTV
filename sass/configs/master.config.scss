@@ -1,0 +1,36 @@
+
+$vendors: webkit, ms;
+
+$imgPath: "/img";
+$htcPath: "/htc";
+$fontPath: "/fonts";
+$svgPath: "/svg";
+$panoramaPath: "/img/parallax";
+$iconPath: "/img/icons";
+
+$borderRadiusHTC: "PIE.htc";
+$pieLazyInit: true;
+
+$ieBaseVer: 7;
+$msFilterPrefix: true; //-ms-filter: || filter:
+
+$stackingLimit: 1000;
+$textIndent: -9999px;
+
+// static module measurements
+$mediaModuleHeight: 440px;
+$mediaModuleWidth: 300px;
+$mediaModuleExpandedWidth: 698px;
+$calloutHeight: 138px;
+$calloutHeightConfig3: 42px;
+$imageHeightConfig3: 250px;
+$image-text-content-width: 230px;
+
+$content-height-config3: 300px;
+
+// sharing overlay positions
+$share-container-left: -10px;
+$share-container-notch-left: $share-container-left + 20;
+
+$pv-share-container-left: 46px;
+$pv-share-container-notch-left: $pv-share-container-left - 65;

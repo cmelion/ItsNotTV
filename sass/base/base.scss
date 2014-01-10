@@ -6,3 +6,17 @@ body {
   background-color: #000;
   background-image: url($image-path + '/red_flame_fractal_background_seamless.jpg');
 }
+
+.fade-in {
+  @include fadeIn();
+  position:absolute;
+  left:8px;
+  top:8px;
+}
+
+.fade-out {
+  @include fadeOut();
+  position:absolute;
+  left:8px;
+  top:8px;
+}

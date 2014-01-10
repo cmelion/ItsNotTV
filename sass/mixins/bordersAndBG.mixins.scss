@@ -1,0 +1,40 @@
+
+@mixin borderRadius($sides, $radius, $useHTC) {
+  @if ($sides == all) {
+    @include vendorPrefixes(border-radius, $radius);
+  } @else {
+    @each $side in $sides {
+      @include vendorPrefixes(border-#{$side}-radius, $radius);
+    }
+    @include ie8(border-radius, $radius);
+  }
+
+  @if ($useHTC == true) {
+   //HTC only supports border-radius and not border-side-radius
+   behavior: url(#{$htcPath}#{$borderRadiusHTC});
+  }
+};
+
+@mixin multiBG($images, $ieFilter, $ieImages, $imgType: "crop") {
+  $bg: "";
+  $imgCount: 0;
+
+  @each $img in $images {
+    $bg: $bg + "url(#{$imgPath}#{$img})";
+
+    $imgCount: $imgCount + 1;
+    @if ($imgCount < length($images)) {
+      $bg: $bg + ",";
+    }
+  };
+
+  background-image: #{$bg};
+
+  @if ($ieFilter == true) {
+    @if (length($ieImages) == 2) {
+      @include ieMultiBG(nth($ieImages, 1), nth($ieImages, 2), $imgType);
+    } @else {
+      @include ieMultiBG(nth($images, 1), nth($images, 2), $imgType);
+    }
+  }
+};

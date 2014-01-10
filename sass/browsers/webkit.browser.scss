@@ -1,0 +1,104 @@
+@mixin webkit($prop, $val, $vendorVal: false) {
+  @if $vendorVal == true {
+    -webkit-#{$prop}: -webkit-#{$val};
+  } @else {
+    -webkit-#{$prop}: $val;
+  }
+  #{$prop}: #{$val};
+};
+
+/*The dialogue which appears after holding your finger on an item for a specified period of time.*/
+@mixin webkitDisableTouchCallout() {
+  -webkit-touch-callout: none;
+};
+
+/*This will enable momentum scrolling instead of the traditional behavior.*/
+@mixin webkitEnableMomentumScroll() {
+  -webkit-overflow-scrolling: touch;
+};
+
+@mixin webkitDisableMomentumScroll() {
+  -webkit-overflow-scrolling: auto;
+};
+
+@mixin webkitHideScrollbars() {
+  ::-webkit-scrollbar{
+    display: none;
+  }
+};
+
+@mixin webkitShowScrollbars() {
+  ::-webkit-scrollbar{
+    display: block;
+  }
+};
+
+/*Setting element to false will force the element's content to be draggable*/
+@mixin webkitEnableDrag($element: true) {
+  @if ($element == true) {
+    -webkit-user-drag: element;
+  } @else {
+    -webkit-user-drag: auto;
+  }
+};
+
+@mixin webkitDisableDrag() {
+  -webkit-user-drag: none;
+};
+
+@mixin webkitLineClamp($lines: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+}
+
+/*Disable any rich-text characters from input.*/
+@mixin webkitDisableRichtext() {
+  -webkit-user-modify: read-write-plaintext-only;
+};
+
+@mixin webkitAdjustFontSize($percent: 100%) {
+  -webkit-text-size-adjust: $percent;
+};
+
+@mixin webkitDisableFontSizeAdjust() {
+  -webkit-text-size-adjut: none;
+};
+
+@mixin webkitPwdCircle() {
+  @include webkitPwd('circle');
+};
+
+@mixin webkitPwdDisc() {
+  @include webkitPwd('disc');
+};
+
+@mixin webkitPwdSquare() {
+  @include webkitPwd('square');
+};
+
+@mixin webkitPwd($type: none){
+  -webkit-text-security: $type;
+};
+
+@mixin webkitCursorGrab(){
+  @include webkitCursor('-webkit-grab');
+};
+
+@mixin webkitCursorGrabbing() {
+  @include webkitCursor('-webkit-grabbing');
+};
+
+@mixin webkitCursorZoomIn() {
+  @include webkitCursor('-webkit-zoom-in');
+};
+
+@mixin webkitCursorZoomOut() {
+  @include webkitCursor('-webkit-zoom-out');
+}
+
+@mixin webkitCursor($type: none){
+  cursor: $type;
+}

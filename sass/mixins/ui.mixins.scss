@@ -1,0 +1,84 @@
+
+@mixin overlay($color: #000, $opacity: 0.5, $ieFilter: false) {
+  .overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: getStackingLimit() - 1;
+    background-color: $color;
+    @include opacity($opacity, $ieFilter);
+  }
+
+  .overlay.active{
+    display:block;
+  }
+};
+
+@mixin modal($width: 50%, $height: 50%, $overlayColor: #000, $opacity: 0.5, $ieFilter: false) {
+  .modal {
+    &:before{ /*THIS IS THE OVERLAY, YOU DON'T NEED A SEPARATE <DIV>*/
+      content: '.';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: getStackingLimit() -1;
+      background-color: $overlayColor;
+      @include opacity($opacity, $ieFilter);
+    }
+
+    display: none;
+    position: fixed;
+    z-index: getStackingLimit();
+    min-width: 200px;
+    min-height: 200px;
+    width: $width;
+    height: $height;
+
+    @if (comparable(50%, $height)) {
+      top: 50% - ($height/2);
+    } @else {
+      top: 50%;
+    };
+
+    @if (comparable(50%, $width)) {
+      left: 50% - ($width/2);
+    } @else {
+      top: 50%;
+    };
+  }
+};
+
+@mixin fullscreen() {
+  :-moz-full-screen,
+  :-webkit-full-screen,
+  :fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: getStackingLimit();
+  }
+};
+
+@mixin selected($color: white, $background-color: black) {
+  ::-moz-selection,
+  ::-webkit-selection,
+  ::-ms-selection,
+  ::-o-selection,
+  ::selection {
+    color: $color;
+    background-color: $background-color;
+  }
+};
+
+@mixin hideText(){
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;;
+};

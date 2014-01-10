@@ -1,0 +1,18 @@
+
+@mixin opacity($opacity, $ieFilter) {
+  @if ($ieFilter == true) {
+    @include ieFilter ("Alpha", "opacity=#{IEOpacity($opacity)}");
+  }
+
+  @include vendorPrefixes(opacity, $opacity);
+};
+
+//SASS Script isn't advanced enough to run regexp, you have to list four color values in an array.
+//One R, one G, one B, one Hex (for IE).
+@mixin transparentBG($colors, $opacity, $ieFilter) {
+  @if ($ieFilter == true) {
+    @include ieTransGradient("all", nth($colors, 4), $opacity);
+  }
+
+  background: rgba(nth($colors, 1), nth($colors, 2), nth($colors, 3), $opacity);
+};

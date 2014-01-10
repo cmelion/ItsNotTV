@@ -1,0 +1,13 @@
+
+@mixin pieGradient($startColor, $endColor) {
+  @include setLayout;
+  behavior: url(#{$htcPath}PIE.htc);
+  -pie-lazy-init: $pieLazyInit;
+  -pie-background: linear-gradient(#{formatColorStr($startColor)}, #{formatColorStr($endColor)});
+};
+
+@mixin pieBoxShadow {
+  @include setLayout;
+  behavior: url(#{$htcPath}PIE.htc);
+  -pie-lazy-init: $pieLazyInit;
+};

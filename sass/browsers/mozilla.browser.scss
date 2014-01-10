@@ -1,0 +1,25 @@
+@function mozDetectTouchEnabled() {
+  //@return :-moz-system-metric(-moz-touch-enabled);
+};
+
+/*Disabling Focus will prevent an item from receiving focus and being tabbed to.*/
+@mixin mozDisableFocus() {
+  -moz-user-focus: ignore;
+};
+
+@mixin mozEnableFocus() {
+  -moz-user-focus: normal;
+};
+
+@mixin mozDisableInput() {
+  -moz-user-input: disabled;
+};
+
+@mixin mozEnableInput() {
+  -moz-user-input: enabled;
+};
+
+/*Forces the broken image icon for missing images, instead of displaying their alt attr.*/
+@mixin forceBrokenImgIcon() {
+  -moz-force-broken-image-icon: 1;
+};

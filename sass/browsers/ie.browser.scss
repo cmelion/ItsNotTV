@@ -1,0 +1,157 @@
+
+/*=====IE8=====*/
+@mixin forkIE($prop, $val) {
+  @if ($ieBaseVer == 6) {
+    @include ie6($prop, $val);
+  } @else if ($ieBaseVer == 7) {
+    @include ie7($prop, $val);
+  } @else if ($ieBaseVer == 8) {
+    @include ie8($prop, $val);
+  }
+};
+
+//Will fork CSS attr to IE.x only by means of CSS hack.
+@mixin ie8($prop, $val) {
+  #{$prop}: #{$val}\9;
+};
+
+@mixin ie7($prop, $val) {
+  *#{$prop}: #{$val};
+};
+
+@mixin ie6($prop, $val) {
+  _#{$prop}: #{$val};
+};
+
+/*=====SetLayout=====*/
+//Will force IE-specific 'has-layout' by means of zoom property.
+@mixin setLayout {
+  zoom: 1;
+};
+
+/*MS POINTER EVENTS*/
+@mixin msCancelPointerEvents() {
+  -ms-touch-action: none;
+};
+
+/*MS TOUCH SCROLLBARS*/
+@mixin msHideTouchScrollbar() {
+  -ms-overflow-style: none;
+};
+
+@mixin msAutohideTouchScrollbar() {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+};
+
+@mixin msShowTouchScrollbar() {
+  -ms-overflow-style: scrollbar;
+};
+
+
+/*=====IEFilter=====*/
+//Will render propritary MS filter CSS property/value pair.
+@mixin ieFilter($name, $settings) {
+  @include setLayout;
+
+  $prefix: "filter";
+  @if ($msFilterPrefix == true) {
+    $prefix: "-ms-filter";
+  }
+
+  #{$prefix}: #{getFilter($name, $settings)};
+};
+
+/*=====IEImg=====*/
+//enlarges or reduces the border of the object to fit the dimensions of the image
+@mixin ieImg($img) {
+  @include ieFilter("AlphaImageLoader", "src=#{$imgPath}#{$img}, sizingMethod=image");
+};
+
+//clips the image to fit the dimensions of the containing object.
+@mixin ieImgCrop($img) {
+  @include ieFilter("AlphaImageLoader", "src=#{$imgPath}#{$img}, sizingMethod=crop");
+};
+
+//will stretch or shrink the image according to the element’s size
+@mixin ieImgScale($img) {
+  @include ieFilter("AlphaImageLoader", "src=#{$imgPath}#{$img}, sizingMethod=scale");
+};
+
+/*=====IEGradient=====*/
+//Will render IE filter-based gradient.
+@mixin ieGradient($dir, $startColor, $endColor) {
+  @include ieFilter("gradient", "GradientType=#{IEGradientDir($dir)}, startColorstr=##{$startColor}, endColorstr=##{$endColor}");
+};
+
+@mixin ieRadialGradient($color) {
+  @include ie8(background-color, $color);
+  @include ieFilter("Alpha", "style=2, opacity=100, finishopacity=0");
+};
+
+@mixin ieTransGradient($dir, $color, $opacity) {
+  $startColor: $color;
+  $endColor: $color;
+
+  @if ($dir == "all") {
+    $startColor: IEOpacity($opacity) + $startColor;
+  }
+  $endColor:  IEOpacity($opacity) + $endColor;
+
+  @include ieGradient($dir, #{$startColor}, #{$endColor});
+};
+
+/*=====IEBackground=====*/
+@mixin ieMultiBG($bgImg1, $bgImg2, $imgType) {
+  @include ie8(background-image, #{$imgPath}$bgImg1);
+
+  @if ($imgType == "crop") {
+    @include ieImgCrop($bgImg2);
+  } @else if ($imgType == "scale") {
+    @include ieImgScale($bgImg2);
+  } @else {
+    @include ieImg($bgImg2);
+  }
+};
+
+/*=====IEOpacity=====*/
+//Converts standard opacity value (specified from 0 to 1)
+//into IE-friendly format (i.e. 40).
+@function IEOpacity($opacity) {
+  @if ($opacity == 0) {
+    @return "00";
+  } @else {
+    @return $opacity * 100;
+  }
+};
+
+/*=====IEGradientDir=====*/
+//Converts standard CSS gradient dir to IE filter-friendly format.
+@function IEGradientDir($dir) {
+  @if ($dir == "top") {
+    @return 0;
+  } @else if ($dir == "all") {
+    @return 0;
+  } @else if ($dir == "left") {
+    @return 1;
+  }
+};
+
+/*=====getFilter=====*/
+//Will return propritary MS filter string.
+@function getFilter($name, $settings) {
+  $filter: "progid:DXImageTransform.Microsoft.#{$name}(";
+
+  $value: "";
+  $settingCount: 0;
+
+  @each $setting in $settings {
+    $value: $value + "#{$setting}";
+
+    $settingCount: $settingCount + 1;
+    @if ($settingCount < length($settings)) {
+  $value: $value + ",";
+};
+  };
+
+@return $filter + $value + ");";
+  };

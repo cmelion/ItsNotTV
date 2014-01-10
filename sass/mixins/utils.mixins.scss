@@ -1,0 +1,33 @@
+
+@function formatColorStr($color) {
+  @if (length($color) == 1) {
+    @return formatHexColor($color);
+  } @else {
+    @return formatColorStop($color);
+  }
+};
+
+@function formatHexColor($color) {
+  @if ($color == "transparent") {
+    @return $color;
+  }
+  @return "#" + $color;
+};
+
+@function formatColorStop($colorStop) {
+  $temp: formatHexColor(nth($colorStop, 1));
+
+  @for $i from 2 through length($colorStop) {
+    $temp: $temp + " " + nth($colorStop, $i);
+  }
+
+  @return $temp;
+};
+
+@function getStackingLimit() {
+  @return $stackingLimit;
+};
+
+@function convertViewportToPercent($val) {
+    @return $val * 100;
+}

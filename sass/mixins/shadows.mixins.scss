@@ -1,0 +1,8 @@
+
+@mixin boxShadow($properties, $useHTC) {
+  @include vendorPrefixes(box-shadow, $properties);
+
+  @if ($useHTC == true) {
+    @include pieBoxShadow;
+  }
+};
