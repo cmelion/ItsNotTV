@@ -51,10 +51,11 @@ intv.core.controllers.LazyLoader = function ($rootScope,$route,$timeout,$locatio
             return;
         }
 
-
+        //Save some useful state information in the rootscope
         $rootScope.previousProperties = $rootScope.properties || {};
         $rootScope.properties =  $rt.properties?$rt.properties:$rootScope.properties;
         $rootScope.properties.location = $location.path();
+        $rootScope.properties.search = $location.$$search;
         console.log('route properties set to scope :' , $rootScope.properties);
         $rt.dependencies = $rt.dependencies?$rt.dependencies:false;
 
@@ -82,6 +83,7 @@ intv.core.controllers.LazyLoader = function ($rootScope,$route,$timeout,$locatio
                         node.parentNode.removeChild( node );
                     }
                     console.log('script tag(s) removed:',$rt.dependencies, +new Date());
+                    $rootScope.$broadcast('page-view');
                 },200, false);
             }
         });

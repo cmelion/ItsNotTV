@@ -28,8 +28,8 @@
             }
         </script-->
     </head>
-    <body ng-controller="LazyLoader">
-        <div ng-include="templates.layout"></div>
+    <body ng-controller="LazyLoader" >
+        <div ng-include="templates.layout" transition-prerender=""></div>
         <script  type="text/javascript" src="application/configs/app-config.js"></script>
         <script  type="text/javascript" src="application/bootstrap.js"></script>
     </body>

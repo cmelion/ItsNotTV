@@ -15,7 +15,7 @@ console.log('application bootstrap starting', intv.instrumentation.timings.boots
 
 
 intv.config.complete = function complete() {
-    intv.app = angular.module('intv.app',['intv.core.controllers']);
+    intv.app = angular.module('intv.app',['intv.core.controllers','intv.core.directives']);
 
     intv.app.config(['$routeProvider', '$locationProvider',
         function ($routeProvider, $locationProvider) {

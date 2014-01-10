@@ -12,7 +12,8 @@ intv.config.corelibs.dependencies = ['core/libs/angular/angular.js',
                                      'core/libs/jsonpath.js'];
 
 // Common/Shared dependencies
-intv.config.core.dependencies = ['core/controllers/lazy-loader-ctrl.js'];
+intv.config.core.dependencies = ['core/controllers/lazy-loader-ctrl.js',
+                                 'core/directives/transition-prerender-dir.js'];
 
 // View/Route specific dependencies
 intv.config.routeConfigs = {

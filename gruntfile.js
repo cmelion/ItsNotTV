@@ -174,8 +174,8 @@ module.exports = function (grunt) {
                 dest: "publish/css/core-styles.css",
                 options: {
                     baseDir : './publish',
-                    maxImageSize: '64000',
-                    deleteAfterEncoding: false
+                    maxImageSize: '32768',
+                    deleteAfterEncoding: true
                 }
             }
         },

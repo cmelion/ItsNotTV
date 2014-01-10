@@ -2,6 +2,7 @@
 $image-path: '/images';
 
 body {
-  color: #ffffff;
+  color: #fff;
+  background-color: #000;
   background-image: url($image-path + '/red_flame_fractal_background_seamless.jpg');
 }
