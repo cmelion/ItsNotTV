@@ -21,7 +21,7 @@
         <meta name="application-name" content="It's Not TV"/>
         <link id="core-css" rel="stylesheet" media="all" type="text/css" href="css/core-styles.css" />
         <!--link id="device-css" rel="stylesheet" media="all" type="text/css" href="css/large-tablet-styles.css" / -->
-        <script type="text/javascript" src="core/libs/modernizr.custom.js"></script>
+        <script type="text/javascript" src="core/libs/modernizr-custom.js"></script>
         <!--script type="text/javascript">
             if (window.matchMedia && window.matchMedia("(max-width: 767px), screen and (orientation: landscape) and (max-device-width: 1024px) and (max-device-height: 767px)").matches){
                 document.getElementById('device-css').href = "css/large-tablet-styles.css";
@@ -29,6 +29,7 @@
         </script-->
     </head>
     <body ng-controller="LazyLoader" >
+        <div id="fixedbg"></div>
         <div ng-include="templates.layout" transition-prerender=""></div>
         <script  type="text/javascript" src="application/configs/app-config.js"></script>
         <script  type="text/javascript" src="application/bootstrap.js"></script>

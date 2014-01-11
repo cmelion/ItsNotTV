@@ -9,6 +9,7 @@ intv.external.dependencies = [];
 // Core Libraries
 intv.config.corelibs.dependencies = ['core/libs/angular/angular.js',
                                      'core/libs/angular/angular-route.js',
+                                     'core/libs/rAF-polyfill-performance.js',
                                      'core/libs/jsonpath.js'];
 
 // Common/Shared dependencies

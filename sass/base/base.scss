@@ -4,7 +4,15 @@ $image-path: '/images';
 body {
   color: #fff;
   background-color: #000;
-  background-image: url($image-path + '/red_flame_fractal_background_seamless.jpg');
+}
+
+#fixedbg{
+  background-image: url($image-path + '/golden_flame_fractal_background_seamless.jpg');
+  height:100%;
+  position:fixed;
+  width:100%;
+  z-index:-1;
+  top:0;
 }
 
 .fade-in {

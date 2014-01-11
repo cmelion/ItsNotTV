@@ -96,7 +96,7 @@ module.exports = function (grunt) {
             bootstrap: {
                 files: [
                     { src: 'publish/application/bootstrap.js', dest: 'publish/application/bootstrap.js' },
-                    { src: 'core/libs/modernizr.custom.js', dest: 'publish/core/libs/modernizr.custom.js' }
+                    { src: 'core/libs/modernizr-custom.js', dest: 'publish/core/libs/modernizr-custom.js' }
                 ]
             },
             main: {
@@ -111,23 +111,34 @@ module.exports = function (grunt) {
 
         // gzip assets 1-to-1 for production
         compress: {
-            main: {
+            javascript: {
                 options: {
                     mode: 'gzip'
                 },
                 expand: true,
                 cwd: '',
-                src: ['publish/**/*.js', 'publish/**/*.css'],
-                dest: ''
+                src: ['publish/**/*.js'],
+                dest: '',
+                ext: ['.js.gz']
+            },
+            css: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: '',
+                src: ['publish/**/*.css'],
+                dest: '',
+                ext: ['.css.gz']
             }
         },
 
         // html compression (partials/templates only)
         htmlcompressor: {
-            compile: {
+            partials: {
                 files: [{
                     expand: true,
-                    src: ['**/*.ptl.html','index.html'],
+                    src: ['**/*.ptl.html'],
                     dest: 'publish/application',
                     cwd: 'application/'
                 }],
@@ -135,7 +146,19 @@ module.exports = function (grunt) {
                     type: 'html',
                     preserveServerScript: true
                 }
-            }
+            },
+            prerenders: {
+                files: [{
+                    expand: true,
+                    src: ['index.html'],
+                    dest: 'publish/',
+                    cwd: ''
+                }],
+                options: {
+                    type: 'html',
+                    preserveServerScript: true
+                }
+            },
         },
 
         //Compile SCSS into the publish folder as CSS
@@ -147,7 +170,7 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    src: ['*.scss'],
+                    src: ['core-styles.scss'],
                     dest: 'publish/css/',
                     cwd: 'sass',
                     ext: '.css'
@@ -217,11 +240,11 @@ module.exports = function (grunt) {
         'writeConfig',
         'groundskeeper',
         'uglify',
-        'compress',
         'htmlcompressor',
         'sass',
         'copy',
         'imageEmbed',
+        'compress',
         'manifest'
     ]);
 
