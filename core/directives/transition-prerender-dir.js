@@ -27,27 +27,32 @@ intv.core.directives.TransitionPrerender = function ($rootScope, $timeout) {
             if  (search && search.stage !== 'prerender'){
                 $clone = document.getElementById('remove-me');
                 if ($clone) {
-                    cloneElement = angular.element($clone);
+                    //Absolute positioned element has been taken out of the flow,
+                    //    we have to set a width because we want to use the same
+                    //    prerender on all devices without rewriting the DOM
+                    $el.style.width = window.innerWidth + "px";
+                    console.log('set width to: ', $el ,window.innerWidth);
                     //Cross-fade
                     $el.style.opacity=1;
                     $clone.style.opacity = 0;
+
                     //Remove pre-render
-                    $timeout(function(){$clone.parentNode.removeChild($clone)}, 500, false);
+                    $timeout(function(){
+                            $clone.parentNode.removeChild($clone);
+                            element.removeClass('fade-out');
+                            //Remove absolute positioning and temporary width
+                            $timeout(function(){
+                                $el.style.width = null;
+                            }, 100, false);
+                    }, 500, false);
                 }
             } else {
-
                 //Get a shallow copy of the node
                 $clone = $el.cloneNode(false);
-                //Prepare pre-rendered node for x-fade/removal
-                $el.id = "remove-me";
-                cloneElement = angular.element($clone);
+
                 //Strip out angular directives from the element and it's children and make sure no binding is attempted
                 intv.core.removeAttrs([$el],"ng-controller");
                 intv.core.removeAttrs([$el],"ng-include");
-
-                //Remove classes added by compile phase
-                element.removeClass('ng-scope').addClass('fade-in');
-                cloneElement.removeClass('ng-scope').addClass('fade-out');
 
                 intv.core.removeAttrs([$el],"transition-prerender");
 
@@ -59,13 +64,30 @@ intv.core.directives.TransitionPrerender = function ($rootScope, $timeout) {
                 intv.core.removeAttrs($el.querySelectorAll("ng-include"),"src");
                 intv.core.removeAttrs($el.querySelectorAll("*[ng-href]"),"ng-href");
                 intv.core.removeAttrs($el.querySelectorAll("*[ng-style]"),"ng-style");
-                intv.core.removeAttrs($el.querySelectorAll("*[style]"),"style");
 
                 //Remove ng-scope class for good measure
                 element.children().removeClass('ng-scope');
 
+
+                //Prepare pre-rendered node for x-fade/removal
+                $el.id = "remove-me";
+                cloneElement = angular.element($clone);
+
+                //Remove classes added by compile phase
+                element.addClass('fade-in');
+                cloneElement.addClass('fade-out');
+
                 //Add the ng-include div back in
                 $el.parentNode.insertBefore($clone, $el.nextSibling);
+
+                //Remove script tags from document, supports pre-render
+                var scripts = document.querySelectorAll("script:not([type])"),
+                    i = scripts.length;
+                while (i--) {
+                    var node = scripts[i];
+                    node.parentNode.removeChild( node );
+                }
+                console.log('script tag(s) removed:',$rt.dependencies, +new Date());
 
                 console.log("stage=prerender", element, attrs);
             }

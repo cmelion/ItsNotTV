@@ -4,6 +4,7 @@ $image-path: '/images';
 body {
   color: #fff;
   background-color: #000;
+  margin: 0;
 }
 
 #fixedbg{
@@ -17,14 +18,11 @@ body {
 
 .fade-in {
   @include fadeIn();
-  position:absolute;
-  left:8px;
-  top:8px;
 }
 
 .fade-out {
   @include fadeOut();
   position:absolute;
-  left:8px;
-  top:8px;
+  top: 0px;
+  left: 0px;
 }

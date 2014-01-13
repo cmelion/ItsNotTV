@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                     { src: srcDependencyArray[0], dest: 'publish/' + tgtDependencyArray[0] }
                 ],
                 options: {  // this options only affect the corelibs sub=task
-                    console: true //Don't try to strip out console.log reference, it's required
+                    console: true //[true] Don't try to strip out console.log reference, it's required
                 }
             },
             application: {
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
                     { src: srcDependencyArray[2], dest: 'publish/' + tgtDependencyArray[2]}
                 ],
                 options: {  // this options only affect the compile sub-task
-                    console: true //Do try to strip out console.log reference, it's required
+                    console: false //[false], Do try to strip out console.log reference
                 }
             }
         },
@@ -118,8 +118,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: '',
                 src: ['publish/**/*.js'],
-                dest: '',
-                ext: ['.js.gz']
+                dest: ''
             },
             css: {
                 options: {
@@ -130,6 +129,16 @@ module.exports = function (grunt) {
                 src: ['publish/**/*.css'],
                 dest: '',
                 ext: ['.css.gz']
+            },
+            html: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: '',
+                src: ['publish/index.html'],
+                dest: '',
+                ext: ['.html.gz']
             }
         },
 

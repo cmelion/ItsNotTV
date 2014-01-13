@@ -10,11 +10,13 @@ intv.external.dependencies = [];
 intv.config.corelibs.dependencies = ['core/libs/angular/angular.js',
                                      'core/libs/angular/angular-route.js',
                                      'core/libs/rAF-polyfill-performance.js',
-                                     'core/libs/jsonpath.js'];
+                                     'core/libs/jsonpath.js'
+                                    ];
 
 // Common/Shared dependencies
 intv.config.core.dependencies = ['core/controllers/lazy-loader-ctrl.js',
-                                 'core/directives/transition-prerender-dir.js'];
+                                 'core/directives/transition-prerender-dir.js'
+                                ];
 
 // View/Route specific dependencies
 intv.config.routeConfigs = {
@@ -22,7 +24,9 @@ intv.config.routeConfigs = {
         properties:   { hideHeader : false,
                         isPanorama : true },
         templates:    { layout: 'application/views/panorama/layout.ptl.html' },
-        dependencies: ['application/views/panorama/panorama-ctrl.js']
+        dependencies: ['application/views/panorama/panorama-ctrl.js',
+                       'core/controllers/css-background-styles-ctrl.js'
+                      ]
 
     }
 };

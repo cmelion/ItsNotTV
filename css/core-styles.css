@@ -57,7 +57,8 @@
 /* base.scss */
 body {
   color: #fff;
-  background-color: #000; }
+  background-color: #000;
+  margin: 0; }
 
 #fixedbg {
   background-image: url("/images/golden_flame_fractal_background_seamless.jpg");
@@ -73,10 +74,7 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in;
   -ms-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-  position: absolute;
-  left: 8px;
-  top: 8px; }
+  transition: opacity 0.5s ease-in; }
   .fade-in.fade-in {
     -webkit-opacity: 1;
     -ms-opacity: 1;
@@ -90,9 +88,103 @@ body {
   -ms-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
   position: absolute;
-  left: 8px;
-  top: 8px; }
+  top: 0px;
+  left: 0px; }
   .fade-out.fade-out {
     -webkit-opacity: 0;
     -ms-opacity: 0;
     opacity: 0; }
+
+/* import phone styles in core stylesheet until tablet styles are ready, then conditionaly load */
+/* this is a top level placeholder for phone-styles use @import instead of placing actual styles here*/
+#fixedbg {
+  display: none; }
+
+.parallax-container ul {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0px;
+  list-style-type: none; }
+
+.primary-itm, .secondary-itm {
+  width: 100%;
+  height: 125px;
+  position: absolute;
+  left: 0; }
+
+.primary-image, .secondary-image {
+  background-repeat: no-repeat;
+  background-size: 230px,125px;
+  border-top: 1px solid #d7bf50;
+  height: 125px;
+  overflow: hidden;
+  background-color: black; }
+
+.primary-itm:nth-child(1) {
+  top: 0px; }
+
+.primary-itm:nth-child(2) {
+  top: 126px; }
+
+.secondary-itm:nth-child(1) {
+  top: 252px; }
+
+.secondary-itm:nth-child(2) {
+  top: 378px; }
+
+.primary-itm:nth-child(3) {
+  top: 504px; }
+
+.secondary-itm:nth-child(3) {
+  top: 630px; }
+
+.secondary-itm:nth-child(4) {
+  top: 756px; }
+
+.primary-itm:nth-child(4) {
+  top: 882px; }
+
+.secondary-itm:nth-child(5) {
+  top: 1008px; }
+
+.secondary-itm:nth-child(6) {
+  top: 1134px; }
+
+#panorama-tertiary-list {
+  top: 0px;
+  position: absolute; }
+
+.program-callout {
+  height: 125px;
+  min-width: 210px;
+  width: 66%;
+  float: right;
+  background: #000;
+  opacity: 0.7;
+  border-top: 1px solid #d7bf50;
+  overlow: hidden;
+  z-index: 2; }
+  .program-callout .col:nth-of-type(2) {
+    display: none; }
+
+.program_text h2 {
+  font-family: "Proxima Nova Light", sans-serif;
+  line-height: 1em;
+  text-transform: none;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 75%;
+  top: 0;
+  left: 250px; }
+
+.program_text {
+  height: 125px;
+  min-width: 210px;
+  width: 66%;
+  float: right;
+  background: #000;
+  opacity: 0.7; }
+
+/* */

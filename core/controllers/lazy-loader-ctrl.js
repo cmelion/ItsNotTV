@@ -47,7 +47,7 @@ intv.core.controllers.LazyLoader = function ($rootScope,$route,$timeout,$locatio
             console.log("reusing previous template on route change, " + $rt.loaded);
 
             //Ensure we are at the top of the page, giving page enough time to render
-            $timeout(function(){window.scrollTo( 0, 0 )},300, false);
+            //$timeout(function(){window.scrollTo( 0, 0 )},300, false);
             return;
         }
 
@@ -71,18 +71,10 @@ intv.core.controllers.LazyLoader = function ($rootScope,$route,$timeout,$locatio
                     $rootScope.templates = $rt.templates;
                     console.log('template set for:',$rt.templates, +new Date());
                     //Ensure we are at the top of the page
-                    $timeout(function(){window.scrollTo( 0, 0 )}, 100);
+                    //$timeout(function(){window.scrollTo( 0, 0 )}, 100);
                 },0);
 
                 $timeout(function(){
-                    //Remove script tags from document, supports pre-render
-                    var scripts = document.querySelectorAll("script:not([type])"),
-                        i = scripts.length;
-                    while (i--) {
-                        var node = scripts[i];
-                        node.parentNode.removeChild( node );
-                    }
-                    console.log('script tag(s) removed:',$rt.dependencies, +new Date());
                     $rootScope.$broadcast('page-view');
                 },200, false);
             }
