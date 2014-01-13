@@ -1,4 +1,7 @@
 /* this is a top level placeholder for core-styles use @import instead of placing actual styles here*/
+$includeConfig3: true;
+$includeConfig12: true;
+
 @import "all-imports.scss";
 @import "base/base.scss";
 

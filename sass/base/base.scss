@@ -7,6 +7,15 @@ body {
   margin: 0;
 }
 
+.parallax-container ul {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0px;
+  list-style-type: none;
+}
+
 #fixedbg{
   background-image: url($image-path + '/golden_flame_fractal_background_seamless.jpg');
   height:100%;

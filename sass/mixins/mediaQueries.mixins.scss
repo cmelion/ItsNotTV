@@ -1,0 +1,124 @@
+
+@mixin mediaQuery($media) {
+  @if $media == phone {
+    @if $includeConfig3 {
+      @media screen
+      and (min-device-width: $phone-min)
+      and (max-device-width: $phone-max) { @content; }
+    }
+  }
+  @else if $media == phone-portrait {
+    @if $includeConfig3 {
+      @media screen
+      and (min-width: $phone-min) { @content; }
+    }
+
+  }
+  @else if $media == phone-landscape {
+    @if $includeConfig3 {
+      @media screen
+      and(max-width: $phone-max) { @content; }
+    }
+
+  }
+  @else if $media == tablet {
+    @if $includeConfig12 == true {
+      @media screen
+      and (min-device-width: $tablet-min)
+      and (max-device-width: $tablet-max) { @content; }
+    }
+
+  }
+  @else if $media == tablet-portrait {
+    @if $includeConfig12 == true {
+      @media screen
+      and (min-device-width: $tablet-min)
+      and (max-device-width: $tablet-max)
+      and (orientation: portrait) { @content; }
+    }
+  }
+  @else if $media == tablet-landscape {
+    @if $includeConfig12 == true {
+      @media screen
+      and (min-device-width: $tablet-min)
+      and (max-device-width: $tablet-max)
+      and (orientation: landscape) { @content; }
+    }
+  }
+  @else if $media == retina {
+
+    @media
+    screen and (-webkit-min-device-pixel-ratio: $retina-max),
+    screen and (min-device-pixel-ratio: $retina-max) { @content; }
+
+  }
+  @else if $media == desktop {
+
+    @media screen
+    and (min-width: $desktop-min) { @content; }
+
+  } @else if $media == desktop-large {
+    @media screen
+    and (min-width: $desktop-lg-min) { @content; }
+  }
+
+  @else if $media == config1 {
+    @if $includeConfig12 == true{
+      @media
+      screen and (min-width: $configuration-1-min)
+      { @content; }
+    }
+  }
+
+  @else if $media == config2 {
+    @if $includeConfig12 == true{
+      @media
+      screen and (max-width: $configuration-2-max)
+      and (min-width: $configuration-2-min)
+      { @content; }
+    }
+  }
+
+  @else if $media == config12 {
+    @if $includeConfig12 == true{
+      @media
+      screen and (min-width: $configuration-2-min)
+      { @content; }
+    }
+  }
+
+  @else if $media == config12Hres {
+    @if $includeConfig12 == true{
+      @media
+      screen and (min-width: $configuration-2-min)
+      and (-webkit-min-device-pixel-ratio: $retina-max)
+      { @content; }
+    }
+  }
+
+  @else if $media == config3 {
+    @if $includeConfig3 == true {
+      @media
+      screen and (max-width: $configuration-3-max),
+      /*ODD SIZE HANDLING  WF 1.2.4 */
+      screen
+      and (orientation: landscape)
+      and (max-device-width: $tablet-max)
+      and (max-device-height: $configuration-3-max)
+
+      { @content; }
+    }
+  }
+
+  @else if $media == config3Hres {
+    @if $includeConfig3 == true{
+      @media screen
+      and (min-device-width: $phone-min)
+      and (max-device-width: $phone-max)
+      and (-webkit-min-device-pixel-ratio: $retina-max)
+
+      { @content; }
+    }
+  }
+
+};
