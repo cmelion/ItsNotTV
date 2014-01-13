@@ -9,7 +9,10 @@
                 ng-init="imageType='primary'">
                 <style webkitscoped scoped x-webkit-scoped
                        ng-controller="intv.core.controllers.cssBackgroundStylesController"
-                       ng-bind="styleStr || cssBackgroundStyles(image, '.primary-itm:nth-child(' + ($index +1) + ') .primary-image')">
+                       ng-bind="styleStr ||
+                                cssBackgroundStyles(image, '.primary-itm:nth-child(' +
+                                ($index +1) +
+                                ') .primary-image')">
                 </style>
                 <div class="primary-image"></div>
             </li>
@@ -21,11 +24,14 @@
             <li ng-repeat="image in secondary"
                 class="secondary-itm"
                 ng-init="imageType='secondary'">
+                <style webkitscoped scoped x-webkit-scoped
+                       ng-controller="intv.core.controllers.cssBackgroundStylesController"
+                       ng-bind="styleStr ||
+                                    cssBackgroundStyles(image, '.secondary-itm:nth-child(' +
+                                    ($index +1) +
+                                     ') .secondary-image')">
+                </style>
                 <div class="secondary-image-container">
-                    <style webkitscoped scoped x-webkit-scoped
-                           ng-controller="intv.core.controllers.cssBackgroundStylesController"
-                           ng-bind="styleStr || cssBackgroundStyles(image, '.secondary-itm:nth-child(' + ($index +1) + ') .secondary-image')">
-                    </style>
                     <div class="secondary-image"></div>
                 </div>
             </li>

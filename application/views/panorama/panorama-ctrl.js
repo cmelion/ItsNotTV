@@ -15,6 +15,14 @@ intv.app.views.panorama.PanoramaCtrl = function PanoramaCtrl($scope){
         return (i !== 0 && i !== 1 && i !== 4 && i !== 7 && i !== 10);
     });
 
+    //TODO: Use device service to determine if we want to load add2home
+    Modernizr.load({
+        load: 'core/libs/add2home.js',
+        complete: function () {
+            // show Add 2 Home bubble
+            addToHome.show();
+        }
+    });
     console.log('Panorama Controller instantiated', Math.abs(new (Date) - intv.instrumentation.timings.bootstrap));
 };
 
