@@ -57,6 +57,7 @@ npm uninstall karma-ng-html2js-preprocessor
 npm uninstall karma-jasmine
 npm uninstall karma-phantomjs-launcher
 npm uninstall karma-coverage
+npm uninstall grunt-s3
 
 # Install dependencies
 npm install grunt-contrib-sass --save-dev
@@ -74,6 +75,7 @@ npm install grunt-htmlcompressor --save-dev
 npm install grunt-zopfli --save-dev
 npm install grunt-groundskeeper --save-dev
 npm install grunt-contrib-uglify --save-dev
+npm install grunt-s3 --save-dev
 #npm install grunt-karma --save-dev
 #npm install karma-junit-reporter --save-dev
 #npm install karma-html2js-preprocessor --save-dev

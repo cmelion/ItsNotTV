@@ -30,7 +30,8 @@
     "karma-requirejs": "~0.2.1",
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.9",
-    "grunt-karma": "~0.6.2"
+    "grunt-karma": "~0.6.2",
+    "grunt-s3": "~0.2.0-alpha.3"
   },
   "engine": "node >= 0.8.18"
 }

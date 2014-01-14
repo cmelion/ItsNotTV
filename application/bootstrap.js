@@ -25,8 +25,8 @@ intv.config.complete = function complete() {
             $locationProvider.html5Mode(true);
 
             // Setup Application Routes
-            $routeProvider.when('/test/:yearID/:monthID/', intv.config.routeConfigs.default);
-            $routeProvider.otherwise(intv.config.routeConfigs.default);
+            $routeProvider.when('/', intv.config.routeConfigs.panorama);
+            $routeProvider.otherwise(intv.config.routeConfigs.error);
         }
     ]);
 

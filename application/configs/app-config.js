@@ -20,7 +20,7 @@ intv.config.core.dependencies = ['core/controllers/lazy-loader-ctrl.js',
 
 // View/Route specific dependencies
 intv.config.routeConfigs = {
-    default: {
+    panorama: {
         properties:   { hideHeader : false,
                         isPanorama : true },
         templates:    { layout: 'application/views/panorama/layout.ptl.html' },
@@ -28,5 +28,8 @@ intv.config.routeConfigs = {
                        'core/controllers/css-background-styles-ctrl.js'
                       ]
 
+    },
+    error: {
+        templates:  {layout: 'application/views/error/layout.ptl.html'}
     }
 };

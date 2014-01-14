@@ -17,6 +17,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-groundskeeper');
     grunt.loadNpmTasks('grunt-htmlcompressor');
+    grunt.loadNpmTasks('grunt-s3');
 
     //Additional libs/setup
 
@@ -41,7 +42,7 @@ module.exports = function (grunt) {
         while(i--){
             p = dependencyPathArray[i];
             q = p.replace('$','newConfig.config');
-            r = p.replace("$['","=['js/").replace(/\'\]\[\'/g,".").replace("']",".js") +"']";
+            r = p.replace("$['","=['js/").replace(/\'\]\[\'/g,"-").replace("']",".js") +"']";
             eval(q + r);
         }
         tgtDependencyArray = jsonPath(newConfig.config,"$..dependencies");
@@ -127,18 +128,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: '',
                 src: ['publish/**/*.css'],
-                dest: '',
-                ext: ['.css.gz']
-            },
-            html: {
-                options: {
-                    mode: 'gzip'
-                },
-                expand: true,
-                cwd: '',
-                src: ['publish/index.html'],
-                dest: '',
-                ext: ['.html.gz']
+                dest: ''
             }
         },
 
@@ -192,7 +182,7 @@ module.exports = function (grunt) {
             publish: {
                 files: [{
                     expand: true,
-                    src: ['images/**/*'],
+                    src: ['images/**/*','core/libs/add2home.js'],
                     dest: 'publish/',
                     cwd: ''
                 }]
@@ -254,6 +244,18 @@ module.exports = function (grunt) {
         'copy',
         'imageEmbed',
         'compress',
+        'manifest'
+    ]);
+
+    grunt.registerTask('publish', [
+        'clean',
+        'writeConfig',
+        'groundskeeper',
+        'uglify',
+        'htmlcompressor',
+        'sass',
+        'copy',
+        'imageEmbed',
         'manifest'
     ]);
 

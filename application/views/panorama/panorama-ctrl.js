@@ -15,10 +15,11 @@ intv.app.views.panorama.PanoramaCtrl = function PanoramaCtrl($scope){
         return (i !== 0 && i !== 1 && i !== 4 && i !== 7 && i !== 10);
     });
 
-    //TODO: Use device service to determine if we want to load add2home
+    //Prompt the user to add this route to their home screen (IOS only)
     Modernizr.load({
-        load: 'core/libs/add2home.js',
-        complete: function () {
+        test: Modernizr.appleios,
+        yep: 'core/libs/add2home.js',
+        callback: function () {
             // show Add 2 Home bubble
             addToHome.show();
         }
