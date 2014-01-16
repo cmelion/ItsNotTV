@@ -1,0 +1,32 @@
+
+
+/* begin primary image mask styles */
+.primary-itm  {
+    @include hardwareAccelerate();
+    .primary-image {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: top left;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-image: url('#{$imgPath}/mask_landscape.png');
+        //-webkit-mask-image: url('#{$imgPath}/parallax/test_mask_rob_portrait.png');
+
+        @media screen and (max-height: 900px) {
+            background-size: auto 142%;
+            -webkit-mask-size: auto 142%;
+        }
+    }
+    &:first-of-type {
+        .primary-image {
+            -webkit-mask-image: url('#{$imgPath}/mask_first.png');
+        }
+    }
+    &:last-of-type {
+        .primary-image {
+            -webkit-mask-image: url('#{$imgPath}/mask_last.png');
+        }
+    }
+}
+/* begin primary image mask styles */
+

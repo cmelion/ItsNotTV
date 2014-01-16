@@ -19,7 +19,22 @@
   .parallax-layer.secondary {
     z-index: 2;
     overflow: hidden;
-    height:100%;
+  }
+
+
+  /* secondary images */
+  .secondary-image-container {
+    background: url(#{$image-path}/secondary_dropshadow_bg.png) 0 0 no-repeat;
+    width: 533px;
+    height: 440px;
+    padding: 15px 0 0 10px;
+
+    .secondary-image {
+      width: auto;
+      height: 390px;
+      background-size: 100% 100%;
+      -webkit-mask: url(#{$image-path}/secondary_image_mask.svg);
+    }
   }
 
   .parallax-layer.tertiary {
@@ -27,15 +42,27 @@
   }
 
   .primary-itm {
-    @include hardwareAccelerate();
     position: absolute;
+    @include hardwareAccelerate();
     height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url('#{$image-path}/mask_landscape.png');
+    &:first-of-type {
+      -webkit-mask-image: url('#{$image-path}/mask_first.png');
+    }
+    &:last-of-type {
+      -webkit-mask-image: url('#{$image-path}/mask_last.png');
+    }
   }
 
   .primary-image {
     height: 100%;
     width: 1150px;
   }
+
 
   .primary-itm:nth-child(1) {
     left: 0px;
