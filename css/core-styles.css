@@ -574,4 +574,47 @@ h4.call-to-action::after {
     left: 4600px; }
 
   .primary-itm:nth-child(6) {
-    left: 5750px; } }
+    left: 5750px; }
+
+  .secondary-itm {
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute; }
+
+  .secondary-itm:nth-child(even) {
+    bottom: 45px; }
+
+  .secondary-itm:nth-child(odd) {
+    top: 45px; }
+
+  .secondary-image {
+    width: 550px;
+    height: 400px; }
+
+  .secondary-itm:nth-child(1) {
+    left: 688px; }
+
+  .secondary-itm:nth-child(2) {
+    left: 1053px; }
+
+  .secondary-itm:nth-child(3) {
+    left: 1913px; }
+
+  .secondary-itm:nth-child(4) {
+    left: 2280px; }
+
+  .secondary-itm:nth-child(5) {
+    left: 3160px; }
+
+  .secondary-itm:nth-child(6) {
+    left: 3536px; }
+
+  .secondary-itm:nth-child(7) {
+    left: 4260px; }
+
+  .secondary-itm:nth-child(8) {
+    left: 4640px; } }
