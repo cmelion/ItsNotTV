@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="18px" height="18px">
+    <g
+        transform="translate(2,2)"
+        stroke="#808080"
+        >
+
+        <line
+            x1="6"
+            y1="4"
+            x2="6"
+            y2="8"
+            stroke-width="1"/>
+
+        <line
+            x1="6"
+            y1="8"
+            x2="9"
+            y2="8"
+            stroke-width="1" />
+
+        <circle
+            cx="6.5"
+            cy="6.5"
+            r="6.5"
+            fill="transparent"
+             stroke-width="2"
+             />
+    </g>
+</svg>

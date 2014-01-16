@@ -1,0 +1,13 @@
+<svg x="0" y="0" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="module-link">
+        <polygon
+            id="module-corner"
+            points="0 0, 23 0, 23 23, 0 0"
+            fill="#919191" />
+
+        <path
+            d="M 6, 9 L 9, 5 20, 5 20, 17 16, 19 17, 11 9, 20 5, 17 14, 8  Z"
+            transform="scale(0.425) translate(28,4)"
+            fill="#fff" />
+     </g>
+</svg>

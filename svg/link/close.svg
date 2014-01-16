@@ -1,0 +1,17 @@
+<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px" y="0px" width="43px" height="43px" viewBox="0 0 43 43"  xml:space="preserve">
+	 <line  fill="none"
+	        stroke="#FFFFFF"
+	        stroke-width="4"
+	        stroke-linecap="round"
+	        stroke-miterlimit="10"
+	        x1="8.474" y1="8.511"
+	        x2="33.908" y2="33.944"/>
+     <line  fill="none"
+            stroke="#FFFFFF"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            x1="33.908" y1="8.511"
+            x2="8.475" y2="33.944"/>
+</svg>

@@ -17,7 +17,7 @@ console.log('application bootstrap starting', intv.instrumentation.timings.boots
 intv.config.complete = function complete() {
     intv.app = angular.module('intv.app',
                               ['intv.core.controllers',
-                               'intv.core.directives']).value('$anchorScroll', angular.noop);;
+                               'intv.core.directives']).value('$anchorScroll', angular.noop);  //Don't autmatically scroll to the top
 
     intv.app.config(['$routeProvider', '$locationProvider',
         function ($routeProvider, $locationProvider) {

@@ -129,6 +129,15 @@ module.exports = function (grunt) {
                 cwd: '',
                 src: ['publish/**/*.css'],
                 dest: ''
+            },
+            html: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: '',
+                src: ['publish/index.html'],
+                dest: ''
             }
         },
 
@@ -157,7 +166,7 @@ module.exports = function (grunt) {
                     type: 'html',
                     preserveServerScript: true
                 }
-            },
+            }
         },
 
         //Compile SCSS into the publish folder as CSS
@@ -182,7 +191,9 @@ module.exports = function (grunt) {
             publish: {
                 files: [{
                     expand: true,
-                    src: ['images/**/*','core/libs/add2home.js'],
+                    src: ['images/**/*',
+                          'svg/**/*',
+                          'core/libs/add2home.js'],
                     dest: 'publish/',
                     cwd: ''
                 }]
@@ -222,6 +233,16 @@ module.exports = function (grunt) {
                     "**/*.ptl.html",
 
                     //Images
+//                    'http://i.lv3.hbo.com/assets/images/documentaries/the-education-of-mohammad-hussein/mobile/panorama/131223-the-education-of-mohammad-hussein-550x400.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/movies/behind-the-candelabra/mobile/panorama/behind-the-candelabra-1150x1280.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/movies/the-normal-heart/mobile/panorama/140108-the-normal-heart-1150x1280.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/game-of-thrones/mobile/panorama/131212-roast-joffrey-550x400.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/girls/mobile/panorama/131112-girls-s3-550x400.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/looking/mobile/panorama/looking-ep1-1150x1280.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/real-sports-with-bryant-gumbel/mobile/panorama/131112-real-sports-01-550x400.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/real-time-with-bill-maher/mobile/panorama/131112-bill-maher-01-550x400.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/silicon-valley/mobile/panorama/140108-silicon-valley-550x400.jpg',
+//                    'http://i.lv3.hbo.com/assets/images/series/true-detective/mobile/panoramas/131112-true-detective-a-1150x1280.jpg',
 
                     //Fonts
 

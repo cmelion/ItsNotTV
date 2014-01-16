@@ -1,0 +1,9 @@
+.hilited-program.masked{
+    @include vendorPrefixes('mask-image', url(#{$imgPath}/parallax/mask.png));
+    @include vendorPrefixes('mask-size', 100% 100%);
+    @include boxShadow("inset 0px 0px 50px 5px #000", false);
+
+    .btn.expand{
+        display: none;
+    }
+};

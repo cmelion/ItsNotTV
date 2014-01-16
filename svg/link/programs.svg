@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="16px" height="16px">
+    <g
+        id="program-menu"
+        transform="translate(2,2)"
+        stroke="#808080"
+        stroke-width="2">
+
+        <line
+            x1="0"
+            y1="0"
+            x2="13"
+            y2="0"
+            stroke-linecap="round"/>
+
+        <line
+            x1="0"
+            y1="4"
+            x2="13"
+            y2="4"
+            stroke-linecap="round"/>
+
+        <line
+            x1="0"
+            y1="8"
+            x2="13"
+            y2="8"
+            stroke-linecap="round"/>
+    </g>
+</svg>

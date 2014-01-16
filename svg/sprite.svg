@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <g id="schedule">
+            <line x1="7" y1="4" x2="7" y2="9" />
+            <line x1="7" y1="9" x2="10" y2="9" />
+            <circle cx="7.5" cy="7.5" r="7.5" fill="transparent"></circle>
+        </g>
+
+        <g id="pagination">
+            <g>
+                <line x1="1" y1="8" x2="8" y2="2" stroke-width="2" stroke="#c8a753" />
+                <line x1="1" y1="8" x2="8" y2="16" stroke-width="2" stroke="#c8a753" />
+            </g>
+            <g>
+                <line x1="10" y1="8" x2="17" y2="2" stroke-width="2" stroke="#c8a753" />
+                <line x1="10" y1="8" x2="17" y2="16" stroke-width="2" stroke="#c8a753" />
+            </g>
+        </g>
+
+        <polygon
+            id="module-corner"
+            points="0 0, 23 0, 23 23, 0 0" />
+    </defs>
+
+    <!--NAV-->
+    <g id="schedule-menu">
+        <use
+            stroke="#fff"
+            stroke-width="2"
+            style="opacity:0.5"
+            transform="translate(10,10)"
+            xlink:href="#schedule" />
+    </g>
+
+    <g
+        id="program-menu"
+        stroke="#fff"
+        stroke-width="2"
+        style="opacity:0.5"
+        transform="translate(10,100)">
+
+        <line x1="0" y1="0" x2="13" y2="0" />
+        <line x1="0" y1="5" x2="13" y2="5" />
+        <line x1="0" y1="9" x2="13" y2="9" />
+    </g>
+
+    <g
+        id="config-menu"
+        fill="#fff"
+        transform="translate(10,200) scale(0.015)"
+        style="opacity:0.5">
+
+        <path d="M433 988 c-4 -7 -10 -33 -13 -58 -5 -43 -7 -46 -62 -73 -53 -27 -58
+        -28 -85 -13 -16 8 -35 22 -42 30 -21 25 -44 19 -84 -22 -40 -41 -46 -62 -21
+        -83 8 -7 22 -26 30 -42 15 -27 14 -32 -13 -85 -27 -55 -30 -57 -73 -62 -65 -8
+        -70 -13 -70 -80 0 -67 5 -72 70 -80 43 -5 46 -7 73 -62 27 -53 28 -58 13 -85
+        -8 -16 -22 -35 -30 -42 -25 -21 -19 -44 22 -84 41 -40 62 -46 83 -21 7 8 25
+        22 41 30 26 14 32 13 86 -13 55 -27 57 -30 62 -73 8 -65 13 -70 79 -70 68 0
+        78 9 83 70 3 44 5 46 58 72 61 30 81 28 121 -8 34 -33 49 -30 92 14 40 41 46
+        62 21 83 -8 7 -22 26 -30 42 -15 27 -14 32 13 85 27 55 30 57 73 62 65 8 70
+        13 70 80 0 67 -5 72 -70 80 -43 5 -46 7 -73 62 -27 53 -28 58 -13 85 8 16 22
+        35 30 42 25 21 19 44 -22 84 -41 40 -62 46 -83 21 -7 -8 -26 -22 -42 -30 -27
+        -15 -32 -14 -85 13 -55 27 -57 29 -60 73 -2 24 -8 50 -14 57 -14 17 -124 17
+        -135 1z m175 -330 c118 -79 105 -266 -23 -328 -61 -30 -137 -25 -193 13 -116
+        76 -105 263 20 326 59 30 140 25 196 -11z"/>
+    </g>
+
+    <!--PAGINATION-->
+    <g
+        id="pagination-left"
+        transform="translate(10,300)">
+
+        <use xlink:href="#pagination" />
+    </g>
+
+    <g
+        id="pagination-right"
+        transform="translate(10,400) rotate(-180 9 8)">
+
+        <use xlink:href="#pagination" />
+    </g>
+
+    <!--PROGRAM VERTICAL-->
+
+    <!--SHARE-->
+    <g
+        id="share-icon"
+        transform="translate(10,500)">
+
+        <g fill="transparent>">
+            <line
+                x1="3"
+                y1="4"
+                x2="10"
+                y2="4"
+                stroke="#d7bf50"
+                stroke-width="2" />
+
+            <path
+                d="M 3, 4 C 3, 4 1, 6 1, 7 L 1, 15 C 1, 15 3, 17 4, 17 L 17, 17 C 17, 17 19, 15 18, 12"
+                stroke="#d7bf50"
+                stroke-width="2"
+                fill="transparent" />
+        </g>
+
+        <g>
+            <polygon
+                points="14 1, 22 6, 14 13"
+                stroke="#d7bf50"
+                stroke-width="1"
+                fill="#d7bf50" />
+
+
+            <path
+                d="M 5, 12 C 6, 10 12, 5 14, 5 L 14, 8.5 Z"
+                stroke="#d7bf50"
+                stroke-width="1"
+                fill="#d7bf50" />
+        </g>
+    </g>
+
+    <!--SCHEDULE-->
+    <g
+        id="schedule-icon"
+        transform="translate(10,600)">
+
+        <use
+            stroke="#c8a753"
+            stroke-width="2"
+            xlink:href="#schedule" />
+    </g>
+
+    <!--NEWS EXPAND/COLLAPSE-->
+    <g
+        id="new-expand-collapse"
+        transform="translate(10,700) rotate(-90 9 8)">
+
+        <use xlink:href="#pagination" />
+    </g>
+
+     <!--EXPANDING MODULE-->
+     <g
+        id="module-expand"
+        transform="translate(10,800)">
+
+        <use
+            xlink:href="#module-corner"
+            fill="#d7bf50" />
+
+        <line x1="16" y1="3" x2="16" y2="10" stroke-width="1.5" stroke="#fff" />
+        <line x1="12" y1="6" x2="20" y2="6" stroke-width="2" stroke="#fff" />
+     </g>
+
+     <!--LINK MODULE-->
+     <g
+        id="module-link"
+        transform="translate(10,900)">
+
+        <use
+            xlink:href="#module-corner"
+            fill="#919191" />
+
+        <path
+            d="M 6, 9 L 9, 5 20, 5 20, 17 16, 19 17, 11 9, 20 5, 17 14, 8  Z"
+            transform="scale(0.425) translate(28,4)"
+            fill="#fff" />
+     </g>
+
+
+</svg>

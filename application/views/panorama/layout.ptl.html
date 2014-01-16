@@ -40,8 +40,14 @@
     <div id="title" ng-class="{ 'parallax-layer': true, 'tertiary': true }" class="parallax-layer tertiary">
         <ul id="panorama-tertiary-list">
             <li ng-repeat="title in programs"
-                class="tertiary-itm program-callout"
-                ng-class="{ 'program-callout': true, 'opaque': tertiaryItm.opacity.opaque }">
+                class="ng-cloak"
+                ng-class="{ 'tertiary-itm': true,
+                            'program-callout': true,
+                            'program-callout': true,
+                            'opaque': tertiaryItm.opacity.opaque,
+                            'primary': $index === 0 || $index === 1 || $index === 4 || $index === 7 || $index === 10,
+                            'secondary-odd': $index === 3 || $index === 5 || $index === 9,
+                            'secondary-even': $index === 2  || $index === 6 || $index === 8}">
                 <div class="col">
                     <h2 ng-class="{ 'program-title-short': !testThresholdExceeded(title.program_title, 9, 20),
                                     'program-title-long': testThresholdExceeded(title.program_title, 9, 20)

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="18px" height="15px">
+    <rect
+        x="0"
+        y="5"
+        width="6"
+        height="6"
+        fill="#717171" />
+
+    <polygon
+        points="6 5, 9 1, 9 14, 6 11"
+        stroke="#717171"
+        stroke-width="1"
+        fill="#717171" />
+
+    <g>
+        <path
+            d="M 13, 4 C 14, 6 14, 10 13, 12"
+            stroke="#717171"
+            stroke-width="1.5" />
+
+        <path
+            d="M 16, 1 C 18, 5 18, 11 16, 15"
+            stroke="#717171"
+            stroke-width="1.5" />
+    </g>
+
+</svg>

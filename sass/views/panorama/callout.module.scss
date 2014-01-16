@@ -1,0 +1,201 @@
+
+  $outline: 1px solid yellow;
+  $textMaxHeight: 80px;
+  $shortTitleHeight: 2.25em;
+  $longTitleHeight: 1.6em;
+
+  $config3_shortTitleHeight: 1.5em;
+  $config3_longTitleHeight: 1.4em;
+
+
+@include mediaQuery(config12) {
+  .program-callout{
+    @include hardwareAccelerate();
+    position: absolute;
+    width: 400px;
+    height: 132px;
+    padding: 0 36px;
+    background: transparent url('#{$svgPath}/title-back.svg') top left no-repeat;
+    background-size: cover;
+
+    .col{
+      display: table-cell;
+      vertical-align: middle;
+
+      &:nth-child(2n){
+        padding-left: 30px;
+        position: relative;
+        z-index: 10;
+      }
+      *{text-align: left;}
+    }
+
+  };
+
+  .title-sprite .col {
+    padding-top: 20px;
+    padding-right: 15px;
+    width:190px;
+    float: left;
+  }
+
+  .title-sprite .col:first-child {
+    padding-left: 35px;
+    width:150px;
+  }
+
+  .title-sprite .col:last-child {
+    float: right;
+  }
+
+  .program-callout.primary {
+    bottom: 30px;
+  }
+
+  .program-callout.secondary-even {
+    top: 90px;
+  }
+
+  .program-callout.secondary-odd {
+    bottom: 90px;
+  }
+
+  .program-callout:nth-child(1) {
+    left: 50px;
+  }
+
+  .program-callout:nth-child(2) {
+    left: 1559px;
+  }
+
+  .program-callout:nth-child(3) {
+    left: 2782px;
+  }
+
+  .program-callout:nth-child(4) {
+    left: 4030px;
+  }
+
+  .program-callout:nth-child(5) {
+    left: 5430px;
+  }
+
+
+
+  .program-callout:nth-child(6){
+    left: 1050px;
+  }
+
+  .program-callout:nth-child(7){
+    left: 800px;
+  }
+
+  .program-callout:nth-child(8){
+    left: 2265px;
+  }
+
+  .program-callout:nth-child(9){
+    left: 2048px;
+  }
+
+
+  .program-callout:nth-child(10){
+    left: 3500px;
+  }
+
+  .program-callout:nth-child(11){
+    left: 3380px;
+  }
+
+  .program-callout:nth-child(12){
+    left: 4610px;
+  }
+
+  .program-callout:nth-child(13){
+    left: 4496px;
+  }
+
+
+}
+
+  .program-title-short, .program-title-long {
+    font-family: "Proxima Nova Light";
+    display: inline-block;
+    color: white;
+    text-transform: none;
+    overflow: hidden;
+    width: 100%;    font-size: #{$longTitleHeight};
+    line-height: 26px;
+    max-height: #{$textMaxHeight};
+    margin-bottom: 2px;
+  }
+
+  .program-summary{
+    font-size: 12px;
+    line-height: 20px;
+    max-height: #{$textMaxHeight};
+    overflow: hidden;
+
+    color: white;
+    font-family: "Proxima Nova Light", sans-serif;
+  };
+
+  h4.call-to-action {
+    font-family: "Proxima Nova SemiBold", sans-serif;
+    font-size: 15px;
+    color: white;
+    white-space: nowrap;
+    position: relative; // position required for z-index
+    z-index: 20;
+    height: 20px;
+    line-height: 1.3em;
+    padding-top: 4px;
+  }
+
+  h4.call-to-action::after {
+    content: url(#{$svgPath}/btn/down-caret.svg);
+    padding: 5px;
+  }
+
+  .foreground-expand {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    // hideText mixin doesn't work here so hardcoded instead
+    text-indent: -100000%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+  .schedule{
+    font-size: 12px;
+  }
+
+  .icon-tune-in {
+    color: #{$lte_yellow};
+    font-family: "Proxima Nova SemiBold", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    /* text-transform: uppercase; */
+
+    background: transparent url(#{$svgPath}/link/schedule-yellow-tiny.svg) 0 1.5px no-repeat;
+    overflow: hidden;
+    padding-left: 15px;
+  }
+
+  // force
+  .expand {
+    width: 460px;
+    height: 132px;
+    @include hideText();
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }

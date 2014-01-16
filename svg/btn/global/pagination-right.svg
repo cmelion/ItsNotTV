@@ -1,0 +1,22 @@
+<svg    version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	    width="26px"
+	    height="22px"
+	    xml:space="preserve">
+    <g transform="rotate(180,13,11)">
+    <polyline   fill="none"
+                stroke="#c8a753"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                points="10.625,2.312 2.438,10.5 10.812,18.875 "
+                />
+
+    <polyline   fill="none"
+                stroke="#c8a753"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                points="23.625,2.312 15.438,10.5 23.812,18.875 "
+                />
+     </g>
+</svg>

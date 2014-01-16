@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	 width="23px" height="13px">
+
+    <filter id="dropshadow" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> <!-- stdDeviation is how much to blur -->
+      <feOffset dx="0" dy="1" result="offsetblur"/> <!-- how much to offset -->
+      <feMerge>
+        <feMergeNode/> <!-- this contains the offset blurred image -->
+        <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+      </feMerge>
+    </filter>
+
+    <polygon id="sharing_x5F_bubble_x5F_path_1_" points="1.296,0.946 10.903,12 19.859,1.029 " style="filter:url(#dropshadow)"/>
+    <path stroke="#343434" stroke-width="2" stroke-miterlimit="10" d="M20.819,0.67"/>
+    <polyline stroke="#343434" stroke-width="2" stroke-miterlimit="10" points="0.93,-0.083 10.883,11.601 20.238,0.077 "/>
+</svg>

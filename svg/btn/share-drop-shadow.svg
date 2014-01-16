@@ -1,0 +1,49 @@
+<svg x="0px" y="0px" width="22px" height="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs>
+        <filter id="f1" x="0" y="0" width="200%" height="200%">
+          <feOffset result="offOut" in="SourceGraphic" dx="3" dy="3" />
+          <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+          values="0.0 0 0 0 0 0 0.0 0 0 0 0 0 0.0 0 0 0 0 0 1 0" />
+          <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="1" />
+          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+
+    <g id="share-icon">
+    <g filter="url(#f1)">
+
+                <polygon
+                    points="14 1, 22 6, 14 13"
+                    stroke="#d7bf50"
+                    stroke-width="1"
+                    fill="#d7bf50"
+                    />
+                <path
+                    d="M 5, 12 C 6, 10 12, 5 14, 5 L 14, 8.5 Z"
+                    stroke="#d7bf50"
+                    stroke-width="1"
+                    fill="#d7bf50"
+                    />
+            </g>
+
+        <g fill="transparent>">
+            <line
+                x1="3"
+                y1="4"
+                x2="10"
+                y2="4"
+                stroke="#d7bf50"
+                stroke-width="2"
+                />
+
+            <path
+                d="M 3, 4 C 3, 4 1, 6 1, 7 L 1, 15 C 1, 15 3, 17 4, 17 L 17, 17 C 17, 17 19, 15 18, 12"
+                stroke="#d7bf50"
+                stroke-width="2"
+                fill="transparent"
+                filter="url(#f1)"
+                />
+        </g>
+    </g>
+</svg>

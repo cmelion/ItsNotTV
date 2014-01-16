@@ -7,4 +7,6 @@ $includeConfig12: true;
 
 /* import phone styles in core stylesheet until tablet styles are ready, then conditionaly load */
 @import "phone-styles.scss";
-/* */
+
+/* import tablet styles into core for now */
+@import "large-tablet-styles.scss";
