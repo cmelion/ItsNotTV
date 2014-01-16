@@ -119,7 +119,7 @@
 }
 
   .program-title-short, .program-title-long {
-    font-family: "Proxima Nova Light";
+    //font-family: "Proxima Nova Light";
     display: inline-block;
     color: white;
     text-transform: none;
@@ -137,11 +137,11 @@
     overflow: hidden;
 
     color: white;
-    font-family: "Proxima Nova Light", sans-serif;
+    //font-family: "Proxima Nova Light", sans-serif;
   };
 
   h4.call-to-action {
-    font-family: "Proxima Nova SemiBold", sans-serif;
+    //font-family: "Proxima Nova SemiBold", sans-serif;
     font-size: 15px;
     color: white;
     white-space: nowrap;
@@ -178,7 +178,7 @@
 
   .icon-tune-in {
     color: #{$lte_yellow};
-    font-family: "Proxima Nova SemiBold", sans-serif;
+    //font-family: "Proxima Nova SemiBold", sans-serif;
     font-size: 12px;
     white-space: nowrap;
     /* text-transform: uppercase; */

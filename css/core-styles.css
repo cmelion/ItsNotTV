@@ -85,7 +85,7 @@
 #addToHomeScreen.addToHomeIOS7 {
   background: #f2f2f2 !important;
   -webkit-border-radius: 1px !important;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
 
 #addToHomeScreen.addToHomeIpad {
@@ -123,13 +123,13 @@
   bottom: -9px;
   left: 50%;
   margin-left: -8px;
-  -webkit-box-shadow: inset -1px -1px 0 darkgrey;
+  -webkit-box-shadow: inset -1px -1px 0 #a9a9a9;
   -webkit-border-bottom-right-radius: 2px; }
 
 #addToHomeScreen.addToHomeIOS7 .addToHomeArrow {
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(204, 204, 204, 0)), color-stop(0.4, rgba(204, 204, 204, 0)), color-stop(0.4, #f2f2f2)) !important;
-  -webkit-box-shadow: inset -1px -1px 0 white !important;
-  border-color: #cccccc !important; }
+  -webkit-box-shadow: inset -1px -1px 0 #fff !important;
+  border-color: #ccc !important; }
 
 /**
  *
@@ -139,7 +139,7 @@
 #addToHomeScreen.addToHomeIpad .addToHomeArrow {
   -webkit-transform: rotateZ(-135deg);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(238, 238, 238, 0)), color-stop(0.4, rgba(238, 238, 238, 0)), color-stop(0.4, #eeeeee));
-  -webkit-box-shadow: inset -1px -1px 0 white;
+  -webkit-box-shadow: inset -1px -1px 0 #fff;
   top: -9px;
   bottom: auto;
   left: 50%; }
@@ -162,14 +162,14 @@
   -webkit-border-radius: 9px;
   background: rgba(0, 0, 0, 0.12);
   color: #888;
-  -webkit-box-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0 #fff;
   font-size: 16px; }
 
 #addToHomeScreen.addToHomeIOS7 .addToHomeClose {
   line-height: 12px;
   padding-right: 1px;
   background: transparent;
-  border: 1px solid #888888;
+  border: 1px solid #888;
   -webkit-box-shadow: none; }
 
 /**
@@ -219,19 +219,27 @@
   -webkit-background-size: 57px 57px;
   background-size: 57px 57px;
   margin: 0 12px 0 0;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
 
 /* base.scss */
 html {
-  font-family: "Proxima Nova Reg", Verdana, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Arial, "Lucida Grande", sans-serif;
+  height: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  color: #fff;
+  color: white;
+  /* needed to prevent white band on right during
+     during orientaiton change on ipad         */
   background-color: #000;
   margin: 0; }
+
+a {
+  font-family: arial;
+  text-decoration: none;
+  color: white; }
 
 .parallax-container ul {
   margin: 0;
@@ -347,7 +355,6 @@ body {
       display: none; }
 
   .program_text h2 {
-    font-family: "Proxima Nova Light", sans-serif;
     line-height: 1em;
     text-transform: none;
     margin-left: 10px;
@@ -450,7 +457,6 @@ body {
   .program-callout:nth-child(13) {
     left: 4496px; } }
 .program-title-short, .program-title-long {
-  font-family: "Proxima Nova Light";
   display: inline-block;
   color: white;
   text-transform: none;
@@ -466,11 +472,9 @@ body {
   line-height: 20px;
   max-height: 80px;
   overflow: hidden;
-  color: white;
-  font-family: "Proxima Nova Light", sans-serif; }
+  color: white; }
 
 h4.call-to-action {
-  font-family: "Proxima Nova SemiBold", sans-serif;
   font-size: 15px;
   color: white;
   white-space: nowrap;
@@ -500,7 +504,6 @@ h4.call-to-action::after {
 
 .icon-tune-in {
   color: #d7bf50;
-  font-family: "Proxima Nova SemiBold", sans-serif;
   font-size: 12px;
   white-space: nowrap;
   /* text-transform: uppercase; */

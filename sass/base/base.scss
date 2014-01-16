@@ -1,16 +1,31 @@
 /* base.scss */
 $image-path: '/images';
 
-html {
-  font-family: "Proxima Nova Reg", Verdana, Helvetica, Arial, "Lucida Grande", sans-serif;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
 
-body {
-  color: #fff;
+html{
+  font-family: Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+};
+
+body{
+  //@include vendorPrefixes(text-rendering, optimizeLegibility);
+  //@include vendorPrefixes(font-smoothing, antialiased);
+  color: white;
+  //-ms-content-zooming: none;
+  /* needed to prevent white band on right during
+     during orientaiton change on ipad         */
   background-color: #000;
   margin: 0;
-}
+  //height: 100%;
+};
+
+
+a{
+  font-family: arial;
+  text-decoration: none;
+  color: white;
+};
 
 .parallax-container ul {
   margin: 0;
