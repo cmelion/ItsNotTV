@@ -18,18 +18,47 @@
 
   .parallax-layer.secondary {
     z-index: 2;
-
-
+    overflow: hidden;
+    height:100%;
   }
 
   .parallax-layer.tertiary {
     z-index: 3;
-
-    .tertiary-container {
-      position: relative;
-      width: 745px;
-      height: 384px;
-    }
-
   }
+
+  .primary-itm {
+    @include hardwareAccelerate();
+    position: absolute;
+    height: 100%;
+  }
+
+  .primary-image {
+    height: 100%;
+    width: 1150px;
+  }
+
+  .primary-itm:nth-child(1) {
+    left: 0px;
+  }
+
+  .primary-itm:nth-child(2) {
+    left: 1150px;
+  }
+
+  .primary-itm:nth-child(3) {
+    left: 2300px;
+  }
+
+  .primary-itm:nth-child(4) {
+    left: 3450px;
+  }
+
+  .primary-itm:nth-child(5) {
+    left: 4600px;
+  }
+
+  .primary-itm:nth-child(6) {
+    left: 5750px;
+  }
+
 }
