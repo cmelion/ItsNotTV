@@ -45,7 +45,6 @@
     position: absolute;
     @include hardwareAccelerate();
     height: 100%;
-    width: 100%;
     background-repeat: no-repeat;
     background-position: top left;
     -webkit-mask-repeat: no-repeat;
