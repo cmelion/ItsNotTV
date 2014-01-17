@@ -35,7 +35,7 @@ intv.app.views.panorama.data = {
     "assets": [
         {
             "program_id": "1350491",
-            "program_title": "True Detective",
+            "program_title": "Angry Birdwalk Empire",
             "program_url": "true-detective",
             "tune_in": "PREMIERING SUN 9PM",
             "marketing_message": "Touch darkness and darkness touches you back.",
@@ -53,7 +53,7 @@ intv.app.views.panorama.data = {
             },
             "program": {
                 "double_res": "http://i.lv3.hbo.com/assets/images/series/true-detective/mobile/panoramas/131112-true-detective-a-460x250.jpg",
-                "single_res": "http://i.lv3.hbo.com/assets/images/series/true-detective/mobile/panoramas/131112-true-detective-a-230x125.jpg"
+                "single_res": "/images/angry-birdwalk/angry-birds-230-125.jpg"
             },
             "alt": "131112-true-detective-a"
         },
@@ -97,7 +97,7 @@ intv.app.views.panorama.data = {
             },
             "secondary": {
                 "double_res": "http://i.lv3.hbo.com/assets/images/series/girls/mobile/panorama/131112-girls-s3-1100x800.jpg",
-                "single_res": "http://i.lv3.hbo.com/assets/images/series/girls/mobile/panorama/131112-girls-s3-550x400.jpg"
+                "single_res": "/images/angry-birdwalk/secondary/angry-birds-550x400.png"
             },
             "program": {
                 "double_res": "http://i.lv3.hbo.com/assets/images/series/girls/mobile/panorama/131112-girls-s3-460x250.jpg",
@@ -205,7 +205,7 @@ intv.app.views.panorama.data = {
             "program_id": "1360860",
             "program_title": "Game of Thongs",
             "program_url": "movies/behind-the-candelabra",
-            "tune_in": "HBO FILMS",
+            "tune_in": "NSA FILMS",
             "marketing_message": "Michael Douglas and Matt Damon star in the story of Liberace.",
             "call_to_action": {
                 "message": "Find Out More",
