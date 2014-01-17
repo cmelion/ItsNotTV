@@ -77,7 +77,7 @@
   }
 
   .program-callout:nth-child(5) {
-    left: 2430px;
+    left: 2970px;
   }
 
 
@@ -152,10 +152,12 @@
     padding-top: 4px;
   }
 
+/*  The SVG does not size correctly on IE10/11 remove pending fix
   h4.call-to-action::after {
     content: url(#{$svgPath}/btn/down-caret.svg);
-    padding: 5px;
-  }
+    padding: 5px
+    height: 11px;
+  }*/
 
   .foreground-expand {
     width: 100%;

@@ -1,7 +1,7 @@
 <!-- application/views/panorama/layout.ptl.html -->
 <div class="parallax-container"
      ng-controller="intv.app.views.panorama.PanoramaCtrl">
-    <div id="primary" ng-class="{ 'parallax-layer': true, 'primary': true }"
+    <div id="primary"
          class="parallax-layer primary">
         <ul id="panorama-primary-list">
             <li ng-repeat="image in primary"
@@ -18,7 +18,7 @@
             </li>
         </ul>
     </div>
-    <div id="secondary" ng-class="{ 'parallax-layer': true, 'native-scroll': true, 'secondary': true }"
+    <div id="secondary"
          class="parallax-layer native-scroll secondary">
         <ul id="panorama-secondary-list">
             <li ng-repeat="image in secondary"
@@ -26,10 +26,7 @@
                 ng-init="imageType='secondary'">
                 <style webkitscoped scoped x-webkit-scoped
                        ng-controller="intv.core.controllers.cssBackgroundStylesController"
-                       ng-bind="styleStr ||
-                                    cssBackgroundStyles(image, '.secondary-itm:nth-child(' +
-                                    ($index +1) +
-                                     ') .secondary-image')">
+                       ng-bind="styleStr || cssBackgroundStyles(image, '.secondary-itm:nth-child(' +($index +1) +') .secondary-image')">
                 </style>
                 <div class="secondary-image-container">
                     <div class="secondary-image"></div>
@@ -37,17 +34,15 @@
             </li>
         </ul>
     </div>
-    <div id="title" ng-class="{ 'parallax-layer': true, 'tertiary': true }" class="parallax-layer tertiary">
+    <div id="title" class="parallax-layer tertiary">
         <ul id="panorama-tertiary-list">
             <li ng-repeat="title in programs"
-                class="ng-cloak"
                 ng-class="{ 'tertiary-itm': true,
                             'program-callout': true,
                             'program-callout': true,
-                            'opaque': tertiaryItm.opacity.opaque,
-                            'primary': $index === 0 || $index === 1 || $index === 4 || $index === 7 || $index === 10,
-                            'secondary-odd': $index === 3 || $index === 6 || $index === 9,
-                            'secondary-even': $index === 2  || $index === 5 || $index === 8}">
+                            'primary': ($index === 0 || $index === 1 || $index === 4 || $index === 7 || $index === 10),
+                            'secondary-odd': ($index === 3 || $index === 6 || $index === 9),
+                            'secondary-even': ($index === 2  || $index === 5 || $index === 8)}">
                 <div class="col">
                     <h2 ng-class="{ 'program-title-short': !testThresholdExceeded(title.program_title, 9, 20),
                                     'program-title-long': testThresholdExceeded(title.program_title, 9, 20)
