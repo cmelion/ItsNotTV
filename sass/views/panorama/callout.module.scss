@@ -15,7 +15,7 @@
     width: 400px;
     height: 132px;
     padding: 0 36px;
-    background: transparent url('#{$svgPath}/title-back.svg') top left no-repeat;
+    background: transparent url('#{$svg-path}/title-back.svg') top left no-repeat;
     background-size: cover;
 
     .col{
@@ -185,7 +185,7 @@
     white-space: nowrap;
     /* text-transform: uppercase; */
 
-    background: transparent url(#{$svgPath}/link/schedule-yellow-tiny.svg) 0 1.5px no-repeat;
+    background: transparent url('#{$svg-path}/link/schedule-yellow-tiny.svg') 0 1.5px no-repeat;
     overflow: hidden;
     padding-left: 15px;
   }
