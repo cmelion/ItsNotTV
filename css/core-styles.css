@@ -85,7 +85,7 @@
 #addToHomeScreen.addToHomeIOS7 {
   background: #f2f2f2 !important;
   -webkit-border-radius: 1px !important;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
 
 #addToHomeScreen.addToHomeIpad {
@@ -123,13 +123,13 @@
   bottom: -9px;
   left: 50%;
   margin-left: -8px;
-  -webkit-box-shadow: inset -1px -1px 0 #a9a9a9;
+  -webkit-box-shadow: inset -1px -1px 0 darkgrey;
   -webkit-border-bottom-right-radius: 2px; }
 
 #addToHomeScreen.addToHomeIOS7 .addToHomeArrow {
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(204, 204, 204, 0)), color-stop(0.4, rgba(204, 204, 204, 0)), color-stop(0.4, #f2f2f2)) !important;
-  -webkit-box-shadow: inset -1px -1px 0 #fff !important;
-  border-color: #ccc !important; }
+  -webkit-box-shadow: inset -1px -1px 0 white !important;
+  border-color: #cccccc !important; }
 
 /**
  *
@@ -139,7 +139,7 @@
 #addToHomeScreen.addToHomeIpad .addToHomeArrow {
   -webkit-transform: rotateZ(-135deg);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(238, 238, 238, 0)), color-stop(0.4, rgba(238, 238, 238, 0)), color-stop(0.4, #eeeeee));
-  -webkit-box-shadow: inset -1px -1px 0 #fff;
+  -webkit-box-shadow: inset -1px -1px 0 white;
   top: -9px;
   bottom: auto;
   left: 50%; }
@@ -162,14 +162,14 @@
   -webkit-border-radius: 9px;
   background: rgba(0, 0, 0, 0.12);
   color: #888;
-  -webkit-box-shadow: 0 1px 0 #fff;
+  -webkit-box-shadow: 0 1px 0 white;
   font-size: 16px; }
 
 #addToHomeScreen.addToHomeIOS7 .addToHomeClose {
   line-height: 12px;
   padding-right: 1px;
   background: transparent;
-  border: 1px solid #888;
+  border: 1px solid #888888;
   -webkit-box-shadow: none; }
 
 /**
@@ -219,7 +219,7 @@
   -webkit-background-size: 57px 57px;
   background-size: 57px 57px;
   margin: 0 12px 0 0;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
 
@@ -264,9 +264,9 @@ a {
   -webkit-opacity: 0;
   -ms-opacity: 0;
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in;
-  -ms-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in; }
+  -webkit-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in; }
   .fade-in.fade-in {
     -webkit-opacity: 1;
     -ms-opacity: 1;
@@ -276,12 +276,9 @@ a {
   -webkit-opacity: 1;
   -ms-opacity: 1;
   opacity: 1;
-  -webkit-transition: opacity 0.5s ease-out;
-  -ms-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-  position: absolute;
-  top: 0px;
-  left: 0px; }
+  -webkit-transition: opacity 0.25s ease-out;
+  -ms-transition: opacity 0.25s ease-out;
+  transition: opacity 0.25s ease-out; }
   .fade-out.fade-out {
     -webkit-opacity: 0;
     -ms-opacity: 0;
@@ -347,10 +344,12 @@ a {
     width: 66%;
     float: right;
     background: #000;
-    opacity: 0.7;
     border-top: 1px solid #d7bf50;
     overlow: hidden;
-    z-index: 2; }
+    z-index: 2;
+    -webkit-opacity: 0.7;
+    -ms-opacity: 0.7;
+    opacity: 0.7; }
     .program-callout .col:nth-of-type(2) {
       display: none; }
 
@@ -369,6 +368,8 @@ a {
     width: 66%;
     float: right;
     background: #000;
+    -webkit-opacity: 0.7;
+    -ms-opacity: 0.7;
     opacity: 0.7; } }
 /* import tablet styles into core for now */
 /* this is a top level placeholder for large-tablet-styles use @import instead of placing actual styles here*/

@@ -71,10 +71,10 @@
     width: 66%;
     float: right;
     background: #000;
-    opacity: 0.7;
     border-top: 1px solid #d7bf50;
     overlow:hidden;
     z-index: 2;
+    @include opacity(0.7, false);
 
     .col:nth-of-type(2) {
       display:none;
@@ -98,6 +98,6 @@
     width: 66%;
     float: right;
     background: #000;
-    opacity: 0.7;
+    @include opacity(0.7, false);
   }
 }

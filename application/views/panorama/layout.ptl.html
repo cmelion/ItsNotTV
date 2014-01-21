@@ -14,7 +14,7 @@
                                 ($index +1) +
                                 ') .primary-image')">
                 </style>
-                <div class="primary-image"></div>
+                <div class="primary-image prerender-opacity"></div>
             </li>
         </ul>
     </div>
@@ -28,8 +28,8 @@
                        ng-controller="intv.core.controllers.cssBackgroundStylesController"
                        ng-bind="styleStr || cssBackgroundStyles(image, '.secondary-itm:nth-child(' +($index +1) +') .secondary-image')">
                 </style>
-                <div class="secondary-image-container">
-                    <div class="secondary-image"></div>
+                <div class="secondary-image-container prerender-opacity">
+                    <div class="secondary-image prerender-opacity"></div>
                 </div>
             </li>
         </ul>

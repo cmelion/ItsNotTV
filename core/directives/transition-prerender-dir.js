@@ -14,6 +14,16 @@ intv.core.removeAttrs = function(elems, attr){
     }
 };
 
+intv.core.setOpacity = function(elems){
+    if ( elems) {
+        var i =  elems.length;
+        while(i--) {
+            //TODO: Add configurations for style and values
+            elems[i].style.opacity = .9;
+        }
+    }
+};
+
 intv.core.directives.TransitionPrerender = function ($rootScope, $timeout) {
 
     var handlePrerenderTransition = function handlePrerenderTransition (scope, element, attrs) {
@@ -44,7 +54,7 @@ intv.core.directives.TransitionPrerender = function ($rootScope, $timeout) {
                             $timeout(function(){
                                 $el.style.width = null;
                             }, 100, false);
-                    }, 500, false);
+                    }, 1000, false);
                 }
             } else {
                 //Get a shallow copy of the node
@@ -68,6 +78,9 @@ intv.core.directives.TransitionPrerender = function ($rootScope, $timeout) {
                 //Remove ng-scope class for good measure
                 element.children().removeClass('ng-scope');
 
+                //Set opacity if class === prerender-opacity
+                intv.core.setOpacity($el.querySelectorAll(".prerender-opacity"));
+
 
                 //Prepare pre-rendered node for x-fade/removal
                 $el.id = "remove-me";
@@ -78,7 +91,7 @@ intv.core.directives.TransitionPrerender = function ($rootScope, $timeout) {
                 cloneElement.addClass('fade-out');
 
                 //Add the ng-include div back in
-                $el.parentNode.insertBefore($clone, $el.nextSibling);
+                $el.parentNode.insertBefore($clone, $el);
 
                 //Remove script tags from document, supports pre-render
                 var scripts = document.querySelectorAll("script:not([type])"),

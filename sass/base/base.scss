@@ -56,7 +56,4 @@ a{
 
 .fade-out {
   @include fadeOut();
-  position:absolute;
-  top: 0px;
-  left: 0px;
 }
