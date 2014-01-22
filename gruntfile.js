@@ -1,6 +1,6 @@
 /*global module:false*/
 module.exports = function (grunt) {
-    var newConfig, tgtDependencyArray, dependencyPathArray, srcDependencyArray;
+    var newConfig, tgtDependencyArray = [], dependencyPathArray = [], srcDependencyArray = [];
     // Project configuration.
 
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -251,6 +251,51 @@ module.exports = function (grunt) {
                 ],
                 dest: "publish/cache.manifest"
             }
+        },
+
+        //Deploy to Amazon S3 (note: there is currently a bug that prevents verify from working if gzip is also used)
+        s3: {
+            options: {
+                key: process.env.AWS_ACCESS_KEY_ID,
+                secret: process.env.AWS_SECRET_ACCESS_KEY,
+                access: 'public-read'
+            },
+            publish: {
+                options: {
+                    bucket: 'its-not-tv.com'
+                },
+                sync: [
+                    {
+                        src: 'publish/**/*.js',
+                        dest: '/',
+                        rel: 'publish',
+                        options: { gzip: true, compressionLevel: 9, verify: true  }
+                    },
+                    {
+                        src: 'publish/**/*.css',
+                        dest: '/',
+                        rel: 'publish',
+                        options: { gzip: true, compressionLevel: 9 , verify: true  }
+                    },
+                    {
+                        src: 'publish/**/*.ptl.html',
+                        dest: '/',
+                        rel: 'publish',
+                        options: { verify: true  }
+                    },
+                    {
+                        src: 'publish/index.html',
+                        dest: '/index.html',
+                        options: { gzip: true, compressionLevel: 9 , verify: true  }
+                    },
+                    {
+                        src: 'publish/cache.manifest',
+                        dest: '/cache.manifest',
+                        options: { verify: true  }
+                    }
+
+                ]
+            }
         }
     });
 
@@ -264,7 +309,6 @@ module.exports = function (grunt) {
         'sass',
         'copy',
         'imageEmbed',
-        'compress',
         'manifest'
     ]);
 
@@ -277,7 +321,8 @@ module.exports = function (grunt) {
         'sass',
         'copy',
         'imageEmbed',
-        'manifest'
+        'manifest',
+        's3'
     ]);
 
     grunt.registerTask('writeConfig',
@@ -288,4 +333,7 @@ module.exports = function (grunt) {
             grunt.log.writeln("wrote 'publish/application/configs/app-config.js'", configStr);
         });
 
+    grunt.registerTask('printenv', function(){
+        console.log(process.env);
+    });
 };
