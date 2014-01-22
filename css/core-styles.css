@@ -423,40 +423,40 @@ a {
     left: 50px; }
 
   .program-callout:nth-child(2) {
-    left: 1559px; }
+    left: 1850px; }
 
   .program-callout:nth-child(3) {
-    left: 410px; }
+    left: 610px; }
 
   .program-callout:nth-child(4) {
-    left: 960px; }
+    left: 1160px; }
 
   .program-callout:nth-child(5) {
-    left: 2970px; }
+    left: 3450px; }
 
   .program-callout:nth-child(6) {
-    left: 1654px; }
+    left: 2155px; }
 
   .program-callout:nth-child(7) {
-    left: 2460px; }
+    left: 2580px; }
 
   .program-callout:nth-child(8) {
-    left: 4100px; }
+    left: 5160px; }
 
   .program-callout:nth-child(9) {
-    left: 2920px; }
+    left: 3710px; }
 
   .program-callout:nth-child(10) {
-    left: 3480px; }
+    left: 4060px; }
 
   .program-callout:nth-child(11) {
-    left: 3380px; }
+    left: 3580px; }
 
   .program-callout:nth-child(12) {
-    left: 4610px; }
+    left: 4810px; }
 
   .program-callout:nth-child(13) {
-    left: 4496px; } }
+    left: 4696px; } }
 .program-title-short, .program-title-long {
   display: inline-block;
   color: white;
@@ -574,19 +574,19 @@ h4.call-to-action {
     left: 0px; }
 
   .primary-itm:nth-child(2) {
-    left: 1150px; }
+    left: 1550px; }
 
   .primary-itm:nth-child(3) {
-    left: 2300px; }
+    left: 3100px; }
 
   .primary-itm:nth-child(4) {
-    left: 3450px; }
+    left: 4650px; }
 
   .primary-itm:nth-child(5) {
-    left: 4600px; }
+    left: 6200px; }
 
   .primary-itm:nth-child(6) {
-    left: 5750px; } }
+    left: 7750px; } }
 /* Tall Config 1/2 displays */
 @media all and (min-height: 920px) and (min-width: 767px) {
   /* secondary images */
@@ -621,25 +621,25 @@ h4.call-to-action {
     height: 400px; }
 
   .secondary-itm:nth-child(1) {
-    left: 688px; }
+    left: 888px; }
 
   .secondary-itm:nth-child(2) {
-    left: 1053px; }
+    left: 1253px; }
 
   .secondary-itm:nth-child(3) {
-    left: 1913px; }
+    left: 2380px; }
 
   .secondary-itm:nth-child(4) {
-    left: 2280px; }
+    left: 2775px; }
 
   .secondary-itm:nth-child(5) {
-    left: 3160px; }
+    left: 3960px; }
 
   .secondary-itm:nth-child(6) {
-    left: 3536px; }
+    left: 4336px; }
 
   .secondary-itm:nth-child(7) {
-    left: 4260px; }
+    left: 5660px; }
 
   .secondary-itm:nth-child(8) {
-    left: 4640px; } }
+    left: 6040px; } }
