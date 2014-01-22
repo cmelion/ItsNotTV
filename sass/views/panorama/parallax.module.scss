@@ -1,4 +1,6 @@
+/* General Config 1/2 tablets and desktops */
 @include mediaQuery(config12) {
+
   .parallax {
     position: absolute;
     top: 0;
@@ -21,29 +23,14 @@
     overflow: hidden;
   }
 
-
-  /* secondary images */
-  .secondary-image-container {
-    background: url(#{$image-path}/secondary_dropshadow_bg.png) 0 0 no-repeat;
-    width: 533px;
-    height: 440px;
-    padding: 15px 0 0 10px;
-
-    .secondary-image {
-      width: auto;
-      height: 390px;
-      background-size: 100% 100%;
-      -webkit-mask: url(#{$image-path}/secondary_image_mask.svg);
-    }
-  }
-
   .parallax-layer.tertiary {
     z-index: 3;
   }
 
+  /* primary items always display in the same location */
   .primary-itm {
-    position: absolute;
     @include hardwareAccelerate();
+    position: absolute;
     height: 100%;
     background-repeat: no-repeat;
     background-position: top left;
@@ -86,6 +73,29 @@
   .primary-itm:nth-child(6) {
     left: 5750px;
   }
+
+
+}
+
+/* Tall Config 1/2 displays */
+@media all and (min-height: 920px) and (min-width: 767px) {
+
+
+  /* secondary images */
+  .secondary-image-container {
+    background: url(#{$image-path}/secondary_dropshadow_bg.png) 0 0 no-repeat;
+    width: 533px;
+    height: 440px;
+    padding: 15px 0 0 10px;
+
+    .secondary-image {
+      width: auto;
+      height: 390px;
+      background-size: 100% 100%;
+      -webkit-mask: url(#{$image-path}/secondary_image_mask.svg);
+    }
+  }
+
 
   .secondary-itm {
     @include hardwareAccelerate();

@@ -526,6 +526,7 @@ h4.call-to-action {
   right: 0;
   z-index: 1; }
 
+/* General Config 1/2 tablets and desktops */
 @media screen and (min-width: 768px) {
   .parallax {
     position: absolute;
@@ -543,29 +544,18 @@ h4.call-to-action {
     z-index: 2;
     overflow: hidden; }
 
-  /* secondary images */
-  .secondary-image-container {
-    background: url(/images/secondary_dropshadow_bg.png) 0 0 no-repeat;
-    width: 533px;
-    height: 440px;
-    padding: 15px 0 0 10px; }
-    .secondary-image-container .secondary-image {
-      width: auto;
-      height: 390px;
-      background-size: 100% 100%;
-      -webkit-mask: url(/images/secondary_image_mask.svg); }
-
   .parallax-layer.tertiary {
     z-index: 3; }
 
+  /* primary items always display in the same location */
   .primary-itm {
-    position: absolute;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
+    position: absolute;
     height: 100%;
     background-repeat: no-repeat;
     background-position: top left;
@@ -596,7 +586,20 @@ h4.call-to-action {
     left: 4600px; }
 
   .primary-itm:nth-child(6) {
-    left: 5750px; }
+    left: 5750px; } }
+/* Tall Config 1/2 displays */
+@media all and (min-height: 920px) and (min-width: 767px) {
+  /* secondary images */
+  .secondary-image-container {
+    background: url(/images/secondary_dropshadow_bg.png) 0 0 no-repeat;
+    width: 533px;
+    height: 440px;
+    padding: 15px 0 0 10px; }
+    .secondary-image-container .secondary-image {
+      width: auto;
+      height: 390px;
+      background-size: 100% 100%;
+      -webkit-mask: url(/images/secondary_image_mask.svg); }
 
   .secondary-itm {
     -webkit-transform: translateZ(0);
