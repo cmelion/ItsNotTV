@@ -13,6 +13,12 @@ intv.core.cssBackgroundStyles = function cssBackgroundStyles (model, selector) {
                 '@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {' +
                 selector + ' {background-image: url(' + this.backgroundImage[this.hres] + ');}}' +
 
+                '@media only screen and (max-height: 919px) and (min-height: 599px) and (min-width: 767px) {' +
+                selector + ' {background-image: url(' + this.backgroundImage[this.primaryLres] + ');}}' +
+
+                '@media only screen and (min-height: 919px) and (min-height: 599px) and (min-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {' +
+                selector + ' {background-image: url(' + this.backgroundImage[this.primaryHres] + ');}}' +
+
                 '@media only screen and (max-width: 767px), only screen and (orientation: landscape) and (max-device-width: 1024px) and (max-device-height: 767px) {' +
                 selector + ' {background-image: url(' + this.backgroundImage[this.phoneLres]+ ');}}' +
 
@@ -33,16 +39,21 @@ intv.core.controllers.cssBackgroundStylesController = function ($scope) {
         image = $scope.image;
 
     //Normalize background image styles
-    image.backgroundImage = {lres:image[imageType].single_res,
+    image.backgroundImage = { lres:image[imageType].single_res,
                               hres:image[imageType].double_res,
+                              primaryLres: image['primary'].single_res,
+                              primaryHres: image['primary'].double_res,
                               phoneLres:image.program.single_res,
-                              phoneHres:image.program.double_res};
+                              phoneHres:image.program.double_res
+                            };
 
     $scope.styleStr = false;
 
     $scope.lres = 'lres';
     $scope.phoneLres = 'phoneLres';
     $scope.hres = retinaAllowed ? 'hres': 'lres';
+    $scope.primaryLres = 'primaryLres';
+    $scope.primaryHres = retinaAllowed ? 'primaryHres' : 'primaryLres';
     $scope.phoneHres = retinaAllowed ? 'phoneHres' : 'phoneLres';
 
     //TODO: Move any methods/functions below into a singleton service for efficiency

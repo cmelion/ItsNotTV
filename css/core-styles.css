@@ -587,6 +587,63 @@ h4.call-to-action {
 
   .primary-itm:nth-child(6) {
     left: 7750px; } }
+@media only screen and (max-height: 919px) and (min-height: 599px) and (min-width: 767px) {
+  .primary-itm:nth-child(2) {
+    left: 1150px; }
+
+  .primary-itm:nth-child(3) {
+    left: 2300px; }
+
+  .primary-itm:nth-child(4) {
+    left: 3450px; }
+
+  .primary-itm:nth-child(5) {
+    left: 4600px; }
+
+  .primary-itm:nth-child(6) {
+    left: 5750px; }
+
+  .secondary-itm {
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url("/images/mask_landscape.png"); }
+
+  .secondary-image, .secondary-image-container {
+    height: 100%;
+    width: 1150px; }
+
+  .secondary-itm:nth-child(1) {
+    left: 888px; }
+
+  .secondary-itm:nth-child(2) {
+    left: 1253px; }
+
+  .secondary-itm:nth-child(3) {
+    left: 2380px; }
+
+  .secondary-itm:nth-child(4) {
+    left: 2775px; }
+
+  .secondary-itm:nth-child(5) {
+    left: 3960px; }
+
+  .secondary-itm:nth-child(6) {
+    left: 4336px; }
+
+  .secondary-itm:nth-child(7) {
+    left: 5660px; }
+
+  .secondary-itm:nth-child(8) {
+    left: 6040px; } }
 /* Tall Config 1/2 displays */
 @media all and (min-height: 920px) and (min-width: 767px) {
   /* secondary images */
