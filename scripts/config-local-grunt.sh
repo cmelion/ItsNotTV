@@ -98,6 +98,8 @@ npm uninstall karma-script-launcher
 
 npm install karma --save-dev
 npm install grunt-karma --save-dev
-npm install karma-phantomjs-launcher --save-dev
 npm install karma-coverage --save-dev
-
+npm install karma-phantomjs-launcher --save-dev
+cd node_modules/karma-phantomjs-launcher
+npm install phantomjs@1.9.1-0 --save-dev
+cd ../..
