@@ -83,8 +83,6 @@ npm install grunt-s3 --save-dev
 #npm install karma-html2js-preprocessor --save-dev
 #npm install karma-ng-html2js-preprocessor --save-dev
 #npm install karma-jasmine --save-dev
-#npm install karma-phantomjs-launcher --save-dev
-npm install karma-coverage --save-dev
 
 
 # Install/override local karma (currently we need 0.8.6)
@@ -100,3 +98,6 @@ npm uninstall karma-script-launcher
 
 npm install karma --save-dev
 npm install grunt-karma --save-dev
+npm install karma-phantomjs-launcher --save-dev
+npm install karma-coverage --save-dev
+
