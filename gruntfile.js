@@ -296,6 +296,18 @@ module.exports = function (grunt) {
 
                 ]
             }
+        },
+
+        // Test settings
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                singleRun: true,
+                coverageReporter: {
+                    type: 'text',
+                    dir: 'coverage'
+                }
+            }
         }
     });
 
@@ -309,7 +321,8 @@ module.exports = function (grunt) {
         'sass',
         'copy',
         'imageEmbed',
-        'manifest'
+        'manifest',
+        'karma:unit'
     ]);
 
     grunt.registerTask('publish', [

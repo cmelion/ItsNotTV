@@ -5,6 +5,7 @@ cd $(dirname $0)/..
 
 # Install karma globally
 npm uninstall -g karma
+npm uninstall -g generator-angular
 npm uninstall karma
 npm uninstall -g grunt-karma
 npm uninstall -g karma-chrome-launcher
@@ -28,6 +29,7 @@ npm install grunt@${GRUNT_VERSION} --save-dev
 
 # Install karma globally
 npm install -g karma
+npm install -g generator-angular
 
 # Uninstall old dependencies
 npm uninstall grunt-sass
@@ -82,7 +84,7 @@ npm install grunt-s3 --save-dev
 #npm install karma-ng-html2js-preprocessor --save-dev
 #npm install karma-jasmine --save-dev
 #npm install karma-phantomjs-launcher --save-dev
-#npm install karma-coverage --save-dev
+npm install karma-coverage --save-dev
 
 
 # Install/override local karma (currently we need 0.8.6)
