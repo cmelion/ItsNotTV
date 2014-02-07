@@ -11,6 +11,7 @@ publlish/.name
 
 i.lv3.hbo.com/**/*
 coverage/**/*
+coverage/.name
 
 
 .idea/ItsNotTV.iml
