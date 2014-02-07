@@ -37,12 +37,8 @@ a{
   list-style-type: none;
 }
 
-.primary-image {
-  background-repeat: no-repeat;
-}
-
 #fixedbg{
-  background-image: url($image-path + '/golden_flame_fractal_background_seamless.jpg');
+  background-image: url($image-path + '/aurora_1024_1024.jpg');
   height:100%;
   position:fixed;
   width:100%;

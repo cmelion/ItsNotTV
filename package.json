@@ -32,7 +32,9 @@
     "karma": "~0.10.9",
     "grunt-karma": "~0.6.2",
     "grunt-s3": "~0.2.0-alpha.3",
-    "karma-coverage": "~0.1.4"
+    "karma-coverage": "~0.1.4",
+    "load-grunt-tasks": "~0.3.0",
+    "time-grunt": "~0.2.9"
   },
   "engine": "node >= 0.8.18"
 }

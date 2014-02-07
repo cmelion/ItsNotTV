@@ -60,6 +60,7 @@
  * Main container
  *
  */
+/* line 6, ../sass/add2home.scss */
 #addToHomeScreen {
   z-index: 9999;
   -webkit-user-select: none;
@@ -80,37 +81,47 @@
   color: #333;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
   line-height: 130%;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
 
+/* line 29, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIOS7 {
   background: #f2f2f2 !important;
   -webkit-border-radius: 1px !important;
-  border: 1px solid #cccccc;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
 
+/* line 36, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIpad {
   width: 268px;
   font-size: 18px;
-  padding: 14px; }
+  padding: 14px;
+}
 
 /**
  *
  * The 'wide' class is added when the popup contains the touch icon
  *
  */
+/* line 47, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeWide {
-  width: 296px; }
+  width: 296px;
+}
 
+/* line 51, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIpad.addToHomeWide {
   width: 320px;
   font-size: 18px;
-  padding: 14px; }
+  padding: 14px;
+}
 
 /**
  *
  * The balloon arrow
  *
  */
+/* line 62, ../sass/add2home.scss */
 #addToHomeScreen .addToHomeArrow {
   position: absolute;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(204, 204, 204, 0)), color-stop(0.4, rgba(204, 204, 204, 0)), color-stop(0.4, #cccccc));
@@ -124,31 +135,37 @@
   left: 50%;
   margin-left: -8px;
   -webkit-box-shadow: inset -1px -1px 0 darkgrey;
-  -webkit-border-bottom-right-radius: 2px; }
+  -webkit-border-bottom-right-radius: 2px;
+}
 
+/* line 77, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIOS7 .addToHomeArrow {
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(204, 204, 204, 0)), color-stop(0.4, rgba(204, 204, 204, 0)), color-stop(0.4, #f2f2f2)) !important;
   -webkit-box-shadow: inset -1px -1px 0 white !important;
-  border-color: #cccccc !important; }
+  border-color: #ccc !important;
+}
 
 /**
  *
  * The balloon arrow for iPad
  *
  */
+/* line 88, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIpad .addToHomeArrow {
   -webkit-transform: rotateZ(-135deg);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, rgba(238, 238, 238, 0)), color-stop(0.4, rgba(238, 238, 238, 0)), color-stop(0.4, #eeeeee));
   -webkit-box-shadow: inset -1px -1px 0 white;
   top: -9px;
   bottom: auto;
-  left: 50%; }
+  left: 50%;
+}
 
 /**
  *
  * Close button
  *
  */
+/* line 101, ../sass/add2home.scss */
 #addToHomeScreen .addToHomeClose {
   -webkit-box-sizing: border-box;
   position: absolute;
@@ -162,30 +179,36 @@
   -webkit-border-radius: 9px;
   background: rgba(0, 0, 0, 0.12);
   color: #888;
-  -webkit-box-shadow: 0 1px 0 white;
-  font-size: 16px; }
+  -webkit-box-shadow: 0 1px 0 #fff;
+  font-size: 16px;
+}
 
+/* line 117, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIOS7 .addToHomeClose {
   line-height: 12px;
   padding-right: 1px;
   background: transparent;
-  border: 1px solid #888888;
-  -webkit-box-shadow: none; }
+  border: 1px solid #888;
+  -webkit-box-shadow: none;
+}
 
 /**
  *
  * The '+' icon, displayed only on iOS < 4.2
  *
  */
+/* line 130, ../sass/add2home.scss */
 #addToHomeScreen .addToHomePlus {
   font-weight: bold;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+}
 
 /**
  *
  * The 'share' icon, displayed only on iOS >= 4.2
  *
  */
+/* line 141, ../sass/add2home.scss */
 #addToHomeScreen .addToHomeShare {
   display: inline-block;
   width: 18px;
@@ -194,18 +217,22 @@
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAQAAADu6HTYAAADPElEQVR4Xq3TX2gcRRzA8e/M7mVv2+TSNpc/TZtrY6jUGqgaSAmEChKLrYK0YH0RFC2CSCkEfCghiKU04J8qNigq6os+iQV98MHWFwVBrQQRWs21lBw5cw3NNb1/udu72RGG5Y77IzXW77D7sAwf5scyYoL6BGXSDKFZwaGpLvIUaeoCkvX1MmsM0Ny6oRSQYOLuIS+YZOpfQdqslpUxcZrzTVAz4qPwW2O3CeIwC/RSzeY6Ow1QhUrkr+YOWfEKDkEP8Rij7CHKJmrFSDHBdwGEE5wiGChPN+PnT8VdRtEIl1d4gRj/1EVe5ZSBKGh8iqQpo/Fo5+3C/gz0MYg4zgwbqday1/Q4B8BGQ45d/Hi54lakCrU5obOcidJpu1+Lg9whjabyaOYLnrIBFFaRD+xe2ybMDWY66GmP/WA9cGfGp0CWhy0wkMN8inepFiH2rV1j0NQSNQbFLRQnS8/8YSDBBpadfv4CYDub2fmeHDNAsL1MBWUel0iA+Xik6eHcyvD3vAMSU1TGuA/YRS+dD7ovCQN43GKRFCU20Kd3V/avDVVyAZ5niTEuLA5/zBGWg9EEEhfJKN200Tat8CmRAQb9+wv7soPlHt2tQorsz1uPbr0HTY4sJwrH47zJZwABBAKLMBoQXepwgTwdHCo+fXMkQ4lrxEmQ5AaXipPqDY9V2vn09tgvTPI71EEGYxM+/uMJLJ4svpgaWGKOi/xKgmqLSUGSUd5f2vIVJ/CgBaTIUsZ7ZBsn0+NzfMOXLFCXQyTcybN6ep5ZZgUOHn7jpfUpsZshdugPGf+E5zjbyHTSRyQ8xfRPPM/s63RHeuknSoT22mjmmnAOIMkUZ6D1xSfPPAfd1WFKM3sO2CMaHx8M1NjnXKHaAGGkOW0C02WeYHUz4qMtx+w5gUDS8NckYe5lHsMYwCZEPyEEmjLDZFmAS7CDviMdxyTkMNVBKEmYLvbiQQBIBBbCQG04bGQvFWz6CfsCQLWCigILFwcfkGYBiOpbYuOizTAyYyDdCtrGaRG1LCkIgMYEFhI0WqQZoSlbGRyHKe4qOx7iv2bVQW9dp4dlM/x6kmwnWQcd/Q3FCqwTEiT5s+6D5v/pb0SSHyg7uhMWAAAAAElFTkSuQmCC);
   background-size: 18px 15px;
   text-indent: -9999em;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
+/* line 152, ../sass/add2home.scss */
 #addToHomeScreen.addToHomeIOS7 .addToHomeShare {
   width: 11px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA8CAYAAAAQTCjdAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAASCQAAEgkB80sG3AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKjSURBVGiB7dpPiFVVHMDxz7m9NCtMyI2bEJEC25WrEkzHUXCRraIwdNE8ZxfYIlcis1ZEbGEzT1QCF4XgH1CyWhUoJKIWNRGEiCNKmkSiYTzfcfGuOokx77x3ZlS8382959zfn+/invvn3RdijHIRBrwkOINCYXEcdjpb7VyiYdBsLScwt5y6IloYdzqXo36Ro0gY9IKWo+5JwmzBt2HQnBw9ehYNazyn5TBee8Dh+Vq+CWu92GufnkTDR6ab7gDeBNHouMM/l9tXTXM0fGBmL726Fg1Dam74EsvKqR8VNowL2Yzj5f7rnnE4DHq2235diYYhhTGfC94up35T0y+6di/ITU0rKVd+sEi0P7xr2pSJOu8zvF+OzqEv7vDH/WFxt7/cshy/ticsN8sXYUht0kXDOlsF9XJ4UaEvNoz9X3zc5bKaZThbyr5jzJ4wlNY7KTgM+ES0vhz+KeiPw36fKC/ucAF9uFBOrTZm26SJCtaV27+xIo7cXdkTEhvOoh+XyxprU1qnim7CQdGK2HAyKRexYVShT3RItDElN+mkjiP2Ym+S3f01hv2EVal5WW6hU0ElmptaqJuBpXg6MbeFH2LDpU6CQ93zWIKnEvs0cayGU3glMfkOo1jQYewZzOuyz7FC95Jwo5OgUFfgeg993hh/eTqCTxOSm/iuk8DY0Ap1b2GhtHXxsfZN4j/X0fOx4auEIknEhqv4OiUn1L13Z/+xWfWVaG4q0dxUormpRHNTieamEs1NJZqbJ1Q0jHvdiJo5S2cVjSNOCHZhn3/SnuYnIvl3yomIIz7MXZMn9hydRCrR3FSiualEc1OJ5qYSzU0lmptKNDePjWgwcPePT7/g+4cp8wCW4GXaryK3tL+mLdD5x62ppllgu7bso8q/2HIbzGWdNmWnSJwAAAAASUVORK5CYII=);
-  background-size: 11px 15px; }
+  background-size: 11px 15px;
+}
 
 /**
  *
  * The touch icon (if available)
  *
  */
+/* line 163, ../sass/add2home.scss */
 #addToHomeScreen .addToHomeTouchIcon {
   display: block;
   float: left;
@@ -219,125 +246,170 @@
   -webkit-background-size: 57px 57px;
   background-size: 57px 57px;
   margin: 0 12px 0 0;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+}
 
 /* base.scss */
+/* line 6, ../sass/base/base.scss */
 html {
   font-family: Arial, "Lucida Grande", sans-serif;
   height: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
+/* line 12, ../sass/base/base.scss */
 body {
   color: white;
   /* needed to prevent white band on right during
      during orientaiton change on ipad         */
   background-color: #000;
-  margin: 0; }
+  margin: 0;
+}
 
+/* line 25, ../sass/base/base.scss */
 a {
   font-family: arial;
   text-decoration: none;
-  color: white; }
+  color: white;
+}
 
+/* line 31, ../sass/base/base.scss */
 .parallax-container ul {
   margin: 0;
   padding: 0;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   -webkit-padding-start: 0px;
-  list-style-type: none; }
+  list-style-type: none;
+}
 
-.primary-image {
-  background-repeat: no-repeat; }
-
+/* line 40, ../sass/base/base.scss */
 #fixedbg {
-  background-image: url("/images/golden_flame_fractal_background_seamless.jpg");
+  background-image: url("/images/aurora_1024_1024.jpg");
   height: 100%;
   position: fixed;
   width: 100%;
   z-index: -1;
-  top: 0; }
+  top: 0;
+}
 
+/* line 49, ../sass/base/base.scss */
 .fade-in {
   -webkit-opacity: 0;
   -ms-opacity: 0;
   opacity: 0;
   -webkit-transition: opacity 0.25s ease-in;
   -ms-transition: opacity 0.25s ease-in;
-  transition: opacity 0.25s ease-in; }
-  .fade-in.fade-in {
-    -webkit-opacity: 1;
-    -ms-opacity: 1;
-    opacity: 1; }
+  transition: opacity 0.25s ease-in;
+}
+/* line 15, ../sass/mixins/transitions.mixins.scss */
+.fade-in.fade-in {
+  -webkit-opacity: 1;
+  -ms-opacity: 1;
+  opacity: 1;
+}
 
+/* line 53, ../sass/base/base.scss */
 .fade-out {
   -webkit-opacity: 1;
   -ms-opacity: 1;
   opacity: 1;
   -webkit-transition: opacity 0.25s ease-out;
   -ms-transition: opacity 0.25s ease-out;
-  transition: opacity 0.25s ease-out; }
-  .fade-out.fade-out {
-    -webkit-opacity: 0;
-    -ms-opacity: 0;
-    opacity: 0; }
+  transition: opacity 0.25s ease-out;
+}
+/* line 6, ../sass/mixins/transitions.mixins.scss */
+.fade-out.fade-out {
+  -webkit-opacity: 0;
+  -ms-opacity: 0;
+  opacity: 0;
+}
 
 /* import phone styles in core stylesheet until tablet styles are ready, then conditionaly load */
 /* this is a top level placeholder for phone-styles use @import instead of placing actual styles here*/
 @media screen and (max-width: 767px), screen and (orientation: landscape) and (max-device-width: 1024px) and (max-device-height: 767px) {
+  /* line 3, ../sass/phone-styles.scss */
   #fixedbg {
-    display: none; }
+    display: none;
+  }
 
+  /* line 7, ../sass/phone-styles.scss */
   .primary-itm, .secondary-itm {
     width: 100%;
     height: 125px;
     position: absolute;
-    left: 0; }
+    left: 0;
+  }
 
+  /* line 13, ../sass/phone-styles.scss */
   .primary-image, .secondary-image {
     background-repeat: no-repeat;
     background-size: 230px,125px;
     border-top: 1px solid #d7bf50;
     height: 125px;
     overflow: hidden;
-    background-color: black; }
+    background-color: black;
+  }
 
+  /* line 22, ../sass/phone-styles.scss */
   .primary-itm:nth-child(1) {
-    top: 0px; }
+    top: 0px;
+  }
 
+  /* line 26, ../sass/phone-styles.scss */
   .primary-itm:nth-child(2) {
-    top: 126px; }
+    top: 126px;
+  }
 
+  /* line 30, ../sass/phone-styles.scss */
   .secondary-itm:nth-child(1) {
-    top: 252px; }
+    top: 252px;
+  }
 
+  /* line 34, ../sass/phone-styles.scss */
   .secondary-itm:nth-child(2) {
-    top: 378px; }
+    top: 378px;
+  }
 
+  /* line 38, ../sass/phone-styles.scss */
   .primary-itm:nth-child(3) {
-    top: 504px; }
+    top: 504px;
+  }
 
+  /* line 42, ../sass/phone-styles.scss */
   .secondary-itm:nth-child(3) {
-    top: 630px; }
+    top: 630px;
+  }
 
+  /* line 46, ../sass/phone-styles.scss */
   .secondary-itm:nth-child(4) {
-    top: 756px; }
+    top: 756px;
+  }
 
+  /* line 50, ../sass/phone-styles.scss */
   .primary-itm:nth-child(4) {
-    top: 882px; }
+    top: 882px;
+  }
 
+  /* line 54, ../sass/phone-styles.scss */
   .secondary-itm:nth-child(5) {
-    top: 1008px; }
+    top: 1008px;
+  }
 
+  /* line 58, ../sass/phone-styles.scss */
   .secondary-itm:nth-child(6) {
-    top: 1134px; }
+    top: 1134px;
+  }
 
+  /* line 64, ../sass/phone-styles.scss */
   #panorama-tertiary-list {
     top: 0px;
-    position: absolute; }
+    position: absolute;
+  }
 
+  /* line 68, ../sass/phone-styles.scss */
   .program-callout {
     height: 125px;
     min-width: 210px;
@@ -349,10 +421,14 @@ a {
     z-index: 2;
     -webkit-opacity: 0.7;
     -ms-opacity: 0.7;
-    opacity: 0.7; }
-    .program-callout .col:nth-of-type(2) {
-      display: none; }
+    opacity: 0.7;
+  }
+  /* line 79, ../sass/phone-styles.scss */
+  .program-callout .col:nth-of-type(2) {
+    display: none;
+  }
 
+  /* line 84, ../sass/phone-styles.scss */
   .program_text h2 {
     line-height: 1em;
     text-transform: none;
@@ -360,8 +436,10 @@ a {
     margin-top: 30px;
     width: 75%;
     top: 0;
-    left: 250px; }
+    left: 250px;
+  }
 
+  /* line 95, ../sass/phone-styles.scss */
   .program_text {
     height: 125px;
     min-width: 210px;
@@ -370,10 +448,13 @@ a {
     background: #000;
     -webkit-opacity: 0.7;
     -ms-opacity: 0.7;
-    opacity: 0.7; } }
+    opacity: 0.7;
+  }
+}
 /* import tablet styles into core for now */
 /* this is a top level placeholder for large-tablet-styles use @import instead of placing actual styles here*/
 @media screen and (min-width: 768px) {
+  /* line 12, ../sass/views/panorama/callout.module.scss */
   .program-callout {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -386,77 +467,124 @@ a {
     height: 132px;
     padding: 0 36px;
     background: transparent url("/svg/title-back.svg") top left no-repeat;
-    background-size: cover; }
-    .program-callout .col {
-      display: table-cell;
-      vertical-align: middle; }
-      .program-callout .col:nth-child(2n) {
-        padding-left: 30px;
-        position: relative;
-        z-index: 10; }
-      .program-callout .col * {
-        text-align: left; }
+    background-size: cover;
+  }
+  /* line 21, ../sass/views/panorama/callout.module.scss */
+  .program-callout .col {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  /* line 25, ../sass/views/panorama/callout.module.scss */
+  .program-callout .col:nth-child(2n) {
+    padding-left: 30px;
+    position: relative;
+    z-index: 10;
+  }
+  /* line 30, ../sass/views/panorama/callout.module.scss */
+  .program-callout .col * {
+    text-align: left;
+  }
 
+  /* line 35, ../sass/views/panorama/callout.module.scss */
   .title-sprite .col {
     padding-top: 20px;
     padding-right: 15px;
     width: 190px;
-    float: left; }
+    float: left;
+  }
 
+  /* line 42, ../sass/views/panorama/callout.module.scss */
   .title-sprite .col:first-child {
     padding-left: 35px;
-    width: 150px; }
+    width: 150px;
+  }
 
+  /* line 47, ../sass/views/panorama/callout.module.scss */
   .title-sprite .col:last-child {
-    float: right; }
+    float: right;
+  }
 
+  /* line 51, ../sass/views/panorama/callout.module.scss */
   .program-callout.primary {
-    bottom: 30px; }
+    bottom: 30px;
+  }
 
+  /* line 55, ../sass/views/panorama/callout.module.scss */
   .program-callout.secondary-even {
-    top: 90px; }
+    top: 90px;
+  }
 
+  /* line 59, ../sass/views/panorama/callout.module.scss */
   .program-callout.secondary-odd {
-    bottom: 90px; }
+    bottom: 90px;
+  }
 
+  /* line 63, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(1) {
-    left: 50px; }
+    left: 50px;
+  }
 
+  /* line 67, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(2) {
-    left: 1850px; }
+    left: 1850px;
+  }
 
+  /* line 71, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(3) {
-    left: 610px; }
+    left: 1330px;
+  }
 
+  /* line 75, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(4) {
-    left: 1160px; }
+    left: 950px;
+  }
 
+  /* line 79, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(5) {
-    left: 3450px; }
+    left: 3450px;
+  }
 
+  /* line 85, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(6) {
-    left: 2155px; }
+    left: 2860px;
+  }
 
+  /* line 89, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(7) {
-    left: 2580px; }
+    left: 2485px;
+  }
 
+  /* line 93, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(8) {
-    left: 5160px; }
+    left: 5160px;
+  }
 
+  /* line 97, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(9) {
-    left: 3710px; }
+    left: 3710px;
+  }
 
+  /* line 102, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(10) {
-    left: 4060px; }
+    left: 4060px;
+  }
 
+  /* line 106, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(11) {
-    left: 3580px; }
+    left: 3580px;
+  }
 
+  /* line 110, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(12) {
-    left: 4810px; }
+    left: 4810px;
+  }
 
+  /* line 114, ../sass/views/panorama/callout.module.scss */
   .program-callout:nth-child(13) {
-    left: 4696px; } }
+    left: 4696px;
+  }
+}
+/* line 121, ../sass/views/panorama/callout.module.scss */
 .program-title-short, .program-title-long {
   display: inline-block;
   color: white;
@@ -466,15 +594,19 @@ a {
   font-size: 1.6em;
   line-height: 26px;
   max-height: 80px;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+}
 
+/* line 133, ../sass/views/panorama/callout.module.scss */
 .program-summary {
   font-size: 12px;
   line-height: 20px;
   max-height: 80px;
   overflow: hidden;
-  color: white; }
+  color: white;
+}
 
+/* line 143, ../sass/views/panorama/callout.module.scss */
 h4.call-to-action {
   font-size: 15px;
   color: white;
@@ -483,7 +615,8 @@ h4.call-to-action {
   z-index: 20;
   height: 20px;
   line-height: 1.3em;
-  padding-top: 4px; }
+  padding-top: 4px;
+}
 
 /*  The SVG does not size correctly on IE10/11 remove pending fix
   h4.call-to-action::after {
@@ -491,6 +624,7 @@ h4.call-to-action {
     padding: 5px
     height: 11px;
   }*/
+/* line 162, ../sass/views/panorama/callout.module.scss */
 .foreground-expand {
   width: 100%;
   height: 100%;
@@ -500,11 +634,15 @@ h4.call-to-action {
   z-index: 10;
   text-indent: -100000%;
   overflow: hidden;
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
+/* line 177, ../sass/views/panorama/callout.module.scss */
 .schedule {
-  font-size: 12px; }
+  font-size: 12px;
+}
 
+/* line 181, ../sass/views/panorama/callout.module.scss */
 .icon-tune-in {
   color: #d7bf50;
   font-size: 12px;
@@ -512,8 +650,10 @@ h4.call-to-action {
   /* text-transform: uppercase; */
   background: transparent url("/svg/link/schedule-yellow-tiny.svg") 0 1.5px no-repeat;
   overflow: hidden;
-  padding-left: 15px; }
+  padding-left: 15px;
+}
 
+/* line 194, ../sass/views/panorama/callout.module.scss */
 .expand {
   width: 460px;
   height: 132px;
@@ -524,30 +664,97 @@ h4.call-to-action {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1; }
+  z-index: 1;
+}
 
+@media only screen and (max-height: 894px) and (min-height: 599px) and (min-width: 767px) {
+  /* line 206, ../sass/views/panorama/callout.module.scss */
+  .program-callout.secondary-even {
+    top: inherit;
+    bottom: 30px;
+  }
+
+  /* line 211, ../sass/views/panorama/callout.module.scss */
+  .program-callout.secondary-odd {
+    bottom: 30px;
+  }
+
+  /* line 215, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(2) {
+    left: 1350px;
+  }
+
+  /* line 219, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(3) {
+    left: 2400px;
+  }
+
+  /* line 223, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(4) {
+    left: 3650px;
+  }
+
+  /* line 227, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(5) {
+    left: 4750px;
+  }
+
+  /* line 231, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(6) {
+    left: 5850px;
+  }
+
+  /* line 235, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(7) {
+    left: 6950px;
+  }
+
+  /* line 239, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(9) {
+    left: 8150px;
+  }
+
+  /* line 243, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(8) {
+    left: 10550px;
+  }
+
+  /* line 247, ../sass/views/panorama/callout.module.scss */
+  .program-callout:nth-child(10) {
+    left: 9350px;
+  }
+}
 /* General Config 1/2 tablets and desktops */
 @media screen and (min-width: 768px) {
+  /* line 4, ../sass/views/panorama/parallax.module.scss */
   .parallax {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+  }
 
+  /* line 14, ../sass/views/panorama/parallax.module.scss */
   .parallax-layer.primary {
     z-index: 1;
     overflow: hidden;
-    height: 100%; }
+    height: 100%;
+  }
 
+  /* line 21, ../sass/views/panorama/parallax.module.scss */
   .parallax-layer.secondary {
     z-index: 2;
-    overflow: hidden; }
+    overflow: hidden;
+  }
 
+  /* line 26, ../sass/views/panorama/parallax.module.scss */
   .parallax-layer.tertiary {
-    z-index: 3; }
+    z-index: 3;
+  }
 
   /* primary items always display in the same location */
+  /* line 31, ../sass/views/panorama/parallax.module.scss */
   .primary-itm {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -557,52 +764,92 @@ h4.call-to-action {
     backface-visibility: hidden;
     position: absolute;
     height: 100%;
-    background-repeat: no-repeat;
-    background-position: top left;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url("/images/mask_landscape.png"); }
-    .primary-itm:first-of-type {
-      -webkit-mask-image: url("/images/mask_first.png"); }
-    .primary-itm:last-of-type {
-      -webkit-mask-image: url("/images/mask_last.png"); }
-
-  .primary-image {
+  }
+  /* line 35, ../sass/views/panorama/parallax.module.scss */
+  .primary-itm .primary-image {
     height: 100%;
-    width: 1150px; }
+    width: 1150px;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(/images/mask_landscape.png);
+    -ms-mask-image: url(/images/mask_landscape.png);
+    mask-image: url(/images/mask_landscape.png);
+    mask: url(/images/mask_landscape.png);
+  }
+  /* line 44, ../sass/views/panorama/parallax.module.scss */
+  .primary-itm:first-of-type .primary-image {
+    -webkit-mask-image: url(/images/mask_first.png);
+    -ms-mask-image: url(/images/mask_first.png);
+    mask-image: url(/images/mask_first.png);
+  }
+  /* line 48, ../sass/views/panorama/parallax.module.scss */
+  .primary-itm:last-of-type .primary-image {
+    -webkit-mask-image: url(/images/mask_last.png);
+    -ms-mask-image: url(/images/mask_last.png);
+    mask-image: url(/images/mask_last.png);
+  }
 
+  /* line 53, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(1) {
-    left: 0px; }
+    left: 0px;
+  }
 
+  /* line 57, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(2) {
-    left: 1550px; }
+    left: 1550px;
+  }
 
+  /* line 61, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(3) {
-    left: 3100px; }
+    left: 3100px;
+  }
 
+  /* line 65, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(4) {
-    left: 4650px; }
+    left: 4650px;
+  }
 
+  /* line 69, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(5) {
-    left: 6200px; }
+    left: 6200px;
+  }
 
+  /* line 73, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(6) {
-    left: 7750px; } }
-@media only screen and (max-height: 919px) and (min-height: 599px) and (min-width: 767px) {
+    left: 7750px;
+  }
+
+  /* line 77, ../sass/views/panorama/parallax.module.scss */
+  .secondary-image {
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (max-height: 894px) and (min-height: 599px) and (min-width: 767px) {
+  /* line 86, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(2) {
-    left: 1150px; }
+    left: 1150px;
+  }
 
+  /* line 90, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(3) {
-    left: 2300px; }
+    left: 4600px;
+  }
 
+  /* line 94, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(4) {
-    left: 3450px; }
+    left: 10400px;
+  }
 
+  /* line 98, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(5) {
-    left: 4600px; }
+    left: 12040px;
+  }
 
+  /* line 102, ../sass/views/panorama/parallax.module.scss */
   .primary-itm:nth-child(6) {
-    left: 5750px; }
+    left: 11500px;
+  }
 
+  /* line 106, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -614,50 +861,74 @@ h4.call-to-action {
     height: 100%;
     background-repeat: no-repeat;
     background-position: top left;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url("/images/mask_landscape.png"); }
+    -webkit-mask-image: url("/images/mask_landscape.png");
+  }
 
+  /* line 115, ../sass/views/panorama/parallax.module.scss */
   .secondary-image, .secondary-image-container {
     height: 100%;
-    width: 1150px; }
+    width: 1150px;
+  }
 
+  /* line 120, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(1) {
-    left: 888px; }
+    left: 2300px;
+  }
 
+  /* line 124, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(2) {
-    left: 1253px; }
+    left: 3450px;
+  }
 
+  /* line 128, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(3) {
-    left: 2380px; }
+    left: 5750px;
+  }
 
+  /* line 132, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(4) {
-    left: 2775px; }
+    left: 6900px;
+  }
 
+  /* line 136, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(5) {
-    left: 3960px; }
+    left: 8050px;
+  }
 
+  /* line 140, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(6) {
-    left: 4336px; }
+    left: 9200px;
+  }
 
+  /* line 144, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(7) {
-    left: 5660px; }
+    left: 11660px;
+  }
 
+  /* line 148, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(8) {
-    left: 6040px; } }
+    left: 12040px;
+  }
+}
 /* Tall Config 1/2 displays */
 @media all and (min-height: 920px) and (min-width: 767px) {
   /* secondary images */
+  /* line 158, ../sass/views/panorama/parallax.module.scss */
   .secondary-image-container {
     background: url(/images/secondary_dropshadow_bg.png) 0 0 no-repeat;
     width: 533px;
     height: 440px;
-    padding: 15px 0 0 10px; }
-    .secondary-image-container .secondary-image {
-      width: auto;
-      height: 390px;
-      background-size: 100% 100%;
-      -webkit-mask: url(/images/secondary_image_mask.svg); }
+    padding: 15px 0 0 10px;
+  }
+  /* line 164, ../sass/views/panorama/parallax.module.scss */
+  .secondary-image-container .secondary-image {
+    width: auto;
+    height: 390px;
+    background-size: 100% 100%;
+    -webkit-mask: url(/images/secondary_image_mask.svg);
+  }
 
+  /* line 173, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -665,38 +936,62 @@ h4.call-to-action {
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    position: absolute; }
+    position: absolute;
+  }
 
+  /* line 178, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(even) {
-    bottom: 45px; }
+    bottom: 45px;
+  }
 
+  /* line 182, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(odd) {
-    top: 45px; }
+    top: 45px;
+  }
 
+  /* line 186, ../sass/views/panorama/parallax.module.scss */
   .secondary-image {
     width: 550px;
-    height: 400px; }
+    height: 400px;
+  }
 
+  /* line 191, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(1) {
-    left: 888px; }
+    left: 888px;
+  }
 
+  /* line 195, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(2) {
-    left: 1253px; }
+    left: 1253px;
+  }
 
+  /* line 199, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(3) {
-    left: 2380px; }
+    left: 2380px;
+  }
 
+  /* line 203, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(4) {
-    left: 2775px; }
+    left: 2775px;
+  }
 
+  /* line 207, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(5) {
-    left: 3960px; }
+    left: 3960px;
+  }
 
+  /* line 211, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(6) {
-    left: 4336px; }
+    left: 4336px;
+  }
 
+  /* line 215, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(7) {
-    left: 5660px; }
+    left: 5660px;
+  }
 
+  /* line 219, ../sass/views/panorama/parallax.module.scss */
   .secondary-itm:nth-child(8) {
-    left: 6040px; } }
+    left: 6040px;
+  }
+}

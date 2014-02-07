@@ -26,6 +26,7 @@ intv.config.complete = function complete() {
 
             // Setup Application Routes
             $routeProvider.when('/', intv.config.routeConfigs.panorama);
+            $routeProvider.when('/no-pre-render', intv.config.routeConfigs.panorama);
             $routeProvider.otherwise(intv.config.routeConfigs.error);
         }
     ]);

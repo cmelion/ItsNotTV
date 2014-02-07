@@ -1,0 +1,5 @@
+/*Forces Hardware Acceleration on items which */
+/*Disabling appearance will remove the browser-specific appearance associated with items such as progress indicators, buttons, menus, etc*/
+/*Disabling pointer events will keep elements from responding to clicks, hover and taps*/
+/*Disabling select will disallow the select of an element's text content*/
+/*Disbling content edit will keep users from being able to modify an element's content.*/

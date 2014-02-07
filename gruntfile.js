@@ -3,21 +3,11 @@ module.exports = function (grunt) {
     var newConfig, tgtDependencyArray = [], dependencyPathArray = [], srcDependencyArray = [];
     // Project configuration.
 
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-manifest');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-compress');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks("grunt-image-embed");
-    grunt.loadNpmTasks('grunt-string-replace');
-    grunt.loadNpmTasks('grunt-angular-templates');
-    grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-zopfli');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-groundskeeper');
-    grunt.loadNpmTasks('grunt-htmlcompressor');
-    grunt.loadNpmTasks('grunt-s3');
+    // Load grunt tasks automatically
+    require('load-grunt-tasks')(grunt);
+
+    // Time how long tasks take. Can help when optimizing build times
+    require('time-grunt')(grunt);
 
     //Additional libs/setup
 
