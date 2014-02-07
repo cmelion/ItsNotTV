@@ -9,6 +9,8 @@ node_modules/.name
 publish/**/*
 publlish/.name
 
+i.lv3.hbo.com/**/*
+coverage/**/*
 
 
 .idea/ItsNotTV.iml
